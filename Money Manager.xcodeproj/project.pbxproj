@@ -9,21 +9,53 @@
 /* Begin PBXBuildFile section */
 		04B2BBA92907EF7A0055C4E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B2BBA82907EF7A0055C4E4 /* AppDelegate.swift */; };
 		04B2BBAB2907EF7A0055C4E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B2BBAA2907EF7A0055C4E4 /* SceneDelegate.swift */; };
-		04B2BBAD2907EF7A0055C4E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B2BBAC2907EF7A0055C4E4 /* ViewController.swift */; };
-		04B2BBB02907EF7A0055C4E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B2BBAE2907EF7A0055C4E4 /* Main.storyboard */; };
 		04B2BBB22907EF7D0055C4E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04B2BBB12907EF7D0055C4E4 /* Assets.xcassets */; };
 		04B2BBB52907EF7D0055C4E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B2BBB32907EF7D0055C4E4 /* LaunchScreen.storyboard */; };
+		04B2BBDF2907EFBE0055C4E4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04B2BBDE2907EFBE0055C4E4 /* GoogleService-Info.plist */; };
+		04B2BBF72907EFD10055C4E4 /* WalletViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B2BBE22907EFD10055C4E4 /* WalletViewController.xib */; };
+		04B2BBF82907EFD10055C4E4 /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B2BBE32907EFD10055C4E4 /* WalletViewController.swift */; };
+		04B2BBF92907EFD10055C4E4 /* ReportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B2BBE52907EFD10055C4E4 /* ReportViewController.xib */; };
+		04B2BBFA2907EFD10055C4E4 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B2BBE62907EFD10055C4E4 /* ReportViewController.swift */; };
+		04B2BBFB2907EFD10055C4E4 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B2BBE82907EFD10055C4E4 /* HomeViewController.xib */; };
+		04B2BBFC2907EFD10055C4E4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B2BBE92907EFD10055C4E4 /* HomeViewController.swift */; };
+		04B2BBFD2907EFD10055C4E4 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B2BBEB2907EFD10055C4E4 /* SignupViewController.swift */; };
+		04B2BBFE2907EFD10055C4E4 /* SignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B2BBEC2907EFD10055C4E4 /* SignupViewController.xib */; };
+		04B2BBFF2907EFD10055C4E4 /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B2BBEE2907EFD10055C4E4 /* AccountViewController.xib */; };
+		04B2BC002907EFD10055C4E4 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B2BBEF2907EFD10055C4E4 /* AccountViewController.swift */; };
+		04B2BC012907EFD10055C4E4 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B2BBF02907EFD10055C4E4 /* CustomTabBarController.swift */; };
+		04B2BC022907EFD10055C4E4 /* AddTransactionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B2BBF22907EFD10055C4E4 /* AddTransactionViewController.xib */; };
+		04B2BC032907EFD10055C4E4 /* AddTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B2BBF32907EFD10055C4E4 /* AddTransactionViewController.swift */; };
+		04B2BC042907EFD10055C4E4 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B2BBF52907EFD10055C4E4 /* LoginViewController.xib */; };
+		04B2BC052907EFD10055C4E4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B2BBF62907EFD10055C4E4 /* LoginViewController.swift */; };
+		04B2BC092907EFFF0055C4E4 /* Extension+UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B2BC072907EFFF0055C4E4 /* Extension+UIFont.swift */; };
+		04B2BC0A2907EFFF0055C4E4 /* Extension+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B2BC082907EFFF0055C4E4 /* Extension+UIColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		04B2BBA52907EF7A0055C4E4 /* Money Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Money Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04B2BBA82907EF7A0055C4E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04B2BBAA2907EF7A0055C4E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		04B2BBAC2907EF7A0055C4E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		04B2BBAF2907EF7A0055C4E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04B2BBB12907EF7D0055C4E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04B2BBB42907EF7D0055C4E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04B2BBB62907EF7D0055C4E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04B2BBDE2907EFBE0055C4E4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		04B2BBE22907EFD10055C4E4 /* WalletViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WalletViewController.xib; sourceTree = "<group>"; };
+		04B2BBE32907EFD10055C4E4 /* WalletViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
+		04B2BBE52907EFD10055C4E4 /* ReportViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReportViewController.xib; sourceTree = "<group>"; };
+		04B2BBE62907EFD10055C4E4 /* ReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
+		04B2BBE82907EFD10055C4E4 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		04B2BBE92907EFD10055C4E4 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		04B2BBEB2907EFD10055C4E4 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		04B2BBEC2907EFD10055C4E4 /* SignupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignupViewController.xib; sourceTree = "<group>"; };
+		04B2BBEE2907EFD10055C4E4 /* AccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
+		04B2BBEF2907EFD10055C4E4 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		04B2BBF02907EFD10055C4E4 /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		04B2BBF22907EFD10055C4E4 /* AddTransactionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddTransactionViewController.xib; sourceTree = "<group>"; };
+		04B2BBF32907EFD10055C4E4 /* AddTransactionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTransactionViewController.swift; sourceTree = "<group>"; };
+		04B2BBF52907EFD10055C4E4 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		04B2BBF62907EFD10055C4E4 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		04B2BC072907EFFF0055C4E4 /* Extension+UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UIFont.swift"; sourceTree = "<group>"; };
+		04B2BC082907EFFF0055C4E4 /* Extension+UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UIColor.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +72,7 @@
 		04B2BB9C2907EF7A0055C4E4 = {
 			isa = PBXGroup;
 			children = (
+				04B2BBDE2907EFBE0055C4E4 /* GoogleService-Info.plist */,
 				04B2BBA72907EF7A0055C4E4 /* Money Manager */,
 				04B2BBA62907EF7A0055C4E4 /* Products */,
 			);
@@ -56,15 +89,102 @@
 		04B2BBA72907EF7A0055C4E4 /* Money Manager */ = {
 			isa = PBXGroup;
 			children = (
+				04B2BC062907EFFF0055C4E4 /* Extension */,
+				04B2BBE02907EFD10055C4E4 /* Controller */,
 				04B2BBA82907EF7A0055C4E4 /* AppDelegate.swift */,
 				04B2BBAA2907EF7A0055C4E4 /* SceneDelegate.swift */,
-				04B2BBAC2907EF7A0055C4E4 /* ViewController.swift */,
-				04B2BBAE2907EF7A0055C4E4 /* Main.storyboard */,
 				04B2BBB12907EF7D0055C4E4 /* Assets.xcassets */,
 				04B2BBB32907EF7D0055C4E4 /* LaunchScreen.storyboard */,
 				04B2BBB62907EF7D0055C4E4 /* Info.plist */,
 			);
 			path = "Money Manager";
+			sourceTree = "<group>";
+		};
+		04B2BBE02907EFD10055C4E4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04B2BBE12907EFD10055C4E4 /* WalletVC */,
+				04B2BBE42907EFD10055C4E4 /* ReportVC */,
+				04B2BBE72907EFD10055C4E4 /* HomeVC */,
+				04B2BBEA2907EFD10055C4E4 /* SignUp */,
+				04B2BBED2907EFD10055C4E4 /* AccountVC */,
+				04B2BBF02907EFD10055C4E4 /* CustomTabBarController.swift */,
+				04B2BBF12907EFD10055C4E4 /* AddTransaction */,
+				04B2BBF42907EFD10055C4E4 /* Login */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04B2BBE12907EFD10055C4E4 /* WalletVC */ = {
+			isa = PBXGroup;
+			children = (
+				04B2BBE22907EFD10055C4E4 /* WalletViewController.xib */,
+				04B2BBE32907EFD10055C4E4 /* WalletViewController.swift */,
+			);
+			path = WalletVC;
+			sourceTree = "<group>";
+		};
+		04B2BBE42907EFD10055C4E4 /* ReportVC */ = {
+			isa = PBXGroup;
+			children = (
+				04B2BBE52907EFD10055C4E4 /* ReportViewController.xib */,
+				04B2BBE62907EFD10055C4E4 /* ReportViewController.swift */,
+			);
+			path = ReportVC;
+			sourceTree = "<group>";
+		};
+		04B2BBE72907EFD10055C4E4 /* HomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				04B2BBE82907EFD10055C4E4 /* HomeViewController.xib */,
+				04B2BBE92907EFD10055C4E4 /* HomeViewController.swift */,
+			);
+			path = HomeVC;
+			sourceTree = "<group>";
+		};
+		04B2BBEA2907EFD10055C4E4 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				04B2BBEB2907EFD10055C4E4 /* SignupViewController.swift */,
+				04B2BBEC2907EFD10055C4E4 /* SignupViewController.xib */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		04B2BBED2907EFD10055C4E4 /* AccountVC */ = {
+			isa = PBXGroup;
+			children = (
+				04B2BBEE2907EFD10055C4E4 /* AccountViewController.xib */,
+				04B2BBEF2907EFD10055C4E4 /* AccountViewController.swift */,
+			);
+			path = AccountVC;
+			sourceTree = "<group>";
+		};
+		04B2BBF12907EFD10055C4E4 /* AddTransaction */ = {
+			isa = PBXGroup;
+			children = (
+				04B2BBF22907EFD10055C4E4 /* AddTransactionViewController.xib */,
+				04B2BBF32907EFD10055C4E4 /* AddTransactionViewController.swift */,
+			);
+			path = AddTransaction;
+			sourceTree = "<group>";
+		};
+		04B2BBF42907EFD10055C4E4 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				04B2BBF52907EFD10055C4E4 /* LoginViewController.xib */,
+				04B2BBF62907EFD10055C4E4 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		04B2BC062907EFFF0055C4E4 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				04B2BC072907EFFF0055C4E4 /* Extension+UIFont.swift */,
+				04B2BC082907EFFF0055C4E4 /* Extension+UIColor.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +245,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				04B2BBB52907EF7D0055C4E4 /* LaunchScreen.storyboard in Resources */,
+				04B2BBF72907EFD10055C4E4 /* WalletViewController.xib in Resources */,
+				04B2BC042907EFD10055C4E4 /* LoginViewController.xib in Resources */,
+				04B2BBF92907EFD10055C4E4 /* ReportViewController.xib in Resources */,
+				04B2BBDF2907EFBE0055C4E4 /* GoogleService-Info.plist in Resources */,
 				04B2BBB22907EF7D0055C4E4 /* Assets.xcassets in Resources */,
-				04B2BBB02907EF7A0055C4E4 /* Main.storyboard in Resources */,
+				04B2BBFB2907EFD10055C4E4 /* HomeViewController.xib in Resources */,
+				04B2BC022907EFD10055C4E4 /* AddTransactionViewController.xib in Resources */,
+				04B2BBFE2907EFD10055C4E4 /* SignupViewController.xib in Resources */,
+				04B2BBFF2907EFD10055C4E4 /* AccountViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,23 +264,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04B2BBAD2907EF7A0055C4E4 /* ViewController.swift in Sources */,
+				04B2BBFD2907EFD10055C4E4 /* SignupViewController.swift in Sources */,
+				04B2BC002907EFD10055C4E4 /* AccountViewController.swift in Sources */,
+				04B2BBF82907EFD10055C4E4 /* WalletViewController.swift in Sources */,
 				04B2BBA92907EF7A0055C4E4 /* AppDelegate.swift in Sources */,
+				04B2BBFA2907EFD10055C4E4 /* ReportViewController.swift in Sources */,
 				04B2BBAB2907EF7A0055C4E4 /* SceneDelegate.swift in Sources */,
+				04B2BC032907EFD10055C4E4 /* AddTransactionViewController.swift in Sources */,
+				04B2BBFC2907EFD10055C4E4 /* HomeViewController.swift in Sources */,
+				04B2BC012907EFD10055C4E4 /* CustomTabBarController.swift in Sources */,
+				04B2BC092907EFFF0055C4E4 /* Extension+UIFont.swift in Sources */,
+				04B2BC0A2907EFFF0055C4E4 /* Extension+UIColor.swift in Sources */,
+				04B2BC052907EFD10055C4E4 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		04B2BBAE2907EF7A0055C4E4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				04B2BBAF2907EF7A0055C4E4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		04B2BBB32907EF7D0055C4E4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
