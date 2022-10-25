@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		049D2BC429082CFC00E036C4 /* AccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D2BC229082CFC00E036C4 /* AccountTableViewCell.swift */; };
+		049D2BC529082CFC00E036C4 /* AccountTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049D2BC329082CFC00E036C4 /* AccountTableViewCell.xib */; };
+		049D2BCB2908324000E036C4 /* ModelTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D2BCA2908324000E036C4 /* ModelTransaction.swift */; };
+		049D2BCE2908328B00E036C4 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D2BCD2908328B00E036C4 /* DBManager.swift */; };
+		049D2BD2290832F200E036C4 /* ConvertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D2BD1290832F200E036C4 /* ConvertHelper.swift */; };
+		049D2BDE2908339100E036C4 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D2BDC2908339100E036C4 /* HistoryViewController.swift */; };
+		049D2BDF2908339100E036C4 /* HistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049D2BDD2908339100E036C4 /* HistoryViewController.xib */; };
+		049D2BE22908544500E036C4 /* ModelCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D2BE12908544400E036C4 /* ModelCategory.swift */; };
+		049D2BE62908549600E036C4 /* Essential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D2BE52908549600E036C4 /* Essential.swift */; };
+		049D2BE9290854B000E036C4 /* Entertaiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D2BE8290854B000E036C4 /* Entertaiment.swift */; };
+		049D2BEC290854DF00E036C4 /* Education.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D2BEB290854DF00E036C4 /* Education.swift */; };
+		049D2BEF290854F500E036C4 /* Investment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D2BEE290854F500E036C4 /* Investment.swift */; };
+		049D2BF22908550D00E036C4 /* Income.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D2BF12908550D00E036C4 /* Income.swift */; };
+		049D2BF52908558C00E036C4 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D2BF42908558C00E036C4 /* Categories.swift */; };
 		04B2BBA92907EF7A0055C4E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B2BBA82907EF7A0055C4E4 /* AppDelegate.swift */; };
 		04B2BBAB2907EF7A0055C4E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B2BBAA2907EF7A0055C4E4 /* SceneDelegate.swift */; };
 		04B2BBB22907EF7D0055C4E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04B2BBB12907EF7D0055C4E4 /* Assets.xcassets */; };
@@ -34,6 +48,20 @@
 
 /* Begin PBXFileReference section */
 		049D2B802908096000E036C4 /* Money Manager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Money Manager.entitlements"; sourceTree = "<group>"; };
+		049D2BC229082CFC00E036C4 /* AccountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewCell.swift; sourceTree = "<group>"; };
+		049D2BC329082CFC00E036C4 /* AccountTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountTableViewCell.xib; sourceTree = "<group>"; };
+		049D2BCA2908324000E036C4 /* ModelTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTransaction.swift; sourceTree = "<group>"; };
+		049D2BCD2908328B00E036C4 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		049D2BD1290832F200E036C4 /* ConvertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertHelper.swift; sourceTree = "<group>"; };
+		049D2BDC2908339100E036C4 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		049D2BDD2908339100E036C4 /* HistoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryViewController.xib; sourceTree = "<group>"; };
+		049D2BE12908544400E036C4 /* ModelCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelCategory.swift; sourceTree = "<group>"; };
+		049D2BE52908549600E036C4 /* Essential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Essential.swift; sourceTree = "<group>"; };
+		049D2BE8290854B000E036C4 /* Entertaiment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entertaiment.swift; sourceTree = "<group>"; };
+		049D2BEB290854DF00E036C4 /* Education.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Education.swift; sourceTree = "<group>"; };
+		049D2BEE290854F500E036C4 /* Investment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Investment.swift; sourceTree = "<group>"; };
+		049D2BF12908550D00E036C4 /* Income.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Income.swift; sourceTree = "<group>"; };
+		049D2BF42908558C00E036C4 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		04B2BBA52907EF7A0055C4E4 /* Money Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Money Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04B2BBA82907EF7A0055C4E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04B2BBAA2907EF7A0055C4E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +103,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		049D2BC129082CDB00E036C4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				049D2BC229082CFC00E036C4 /* AccountTableViewCell.swift */,
+				049D2BC329082CFC00E036C4 /* AccountTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		049D2BC92908321800E036C4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				049D2BE42908547800E036C4 /* Category */,
+				049D2BCA2908324000E036C4 /* ModelTransaction.swift */,
+				049D2BCD2908328B00E036C4 /* DBManager.swift */,
+				049D2BF42908558C00E036C4 /* Categories.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		049D2BD0290832E300E036C4 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				049D2BD1290832F200E036C4 /* ConvertHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		049D2BD52908333E00E036C4 /* HistoryVC */ = {
+			isa = PBXGroup;
+			children = (
+				049D2BDC2908339100E036C4 /* HistoryViewController.swift */,
+				049D2BDD2908339100E036C4 /* HistoryViewController.xib */,
+			);
+			path = HistoryVC;
+			sourceTree = "<group>";
+		};
+		049D2BE42908547800E036C4 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				049D2BE12908544400E036C4 /* ModelCategory.swift */,
+				049D2BE52908549600E036C4 /* Essential.swift */,
+				049D2BE8290854B000E036C4 /* Entertaiment.swift */,
+				049D2BEB290854DF00E036C4 /* Education.swift */,
+				049D2BEE290854F500E036C4 /* Investment.swift */,
+				049D2BF12908550D00E036C4 /* Income.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		04B2BB9C2907EF7A0055C4E4 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +175,8 @@
 		04B2BBA72907EF7A0055C4E4 /* Money Manager */ = {
 			isa = PBXGroup;
 			children = (
+				049D2BD0290832E300E036C4 /* Helper */,
+				049D2BC92908321800E036C4 /* Model */,
 				049D2B802908096000E036C4 /* Money Manager.entitlements */,
 				04B2BC062907EFFF0055C4E4 /* Extension */,
 				04B2BBE02907EFD10055C4E4 /* Controller */,
@@ -112,6 +192,7 @@
 		04B2BBE02907EFD10055C4E4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				049D2BD52908333E00E036C4 /* HistoryVC */,
 				04B2BBE12907EFD10055C4E4 /* WalletVC */,
 				04B2BBE42907EFD10055C4E4 /* ReportVC */,
 				04B2BBE72907EFD10055C4E4 /* HomeVC */,
@@ -145,8 +226,8 @@
 		04B2BBE72907EFD10055C4E4 /* HomeVC */ = {
 			isa = PBXGroup;
 			children = (
-				04B2BBE82907EFD10055C4E4 /* HomeViewController.xib */,
 				04B2BBE92907EFD10055C4E4 /* HomeViewController.swift */,
+				04B2BBE82907EFD10055C4E4 /* HomeViewController.xib */,
 			);
 			path = HomeVC;
 			sourceTree = "<group>";
@@ -163,8 +244,9 @@
 		04B2BBED2907EFD10055C4E4 /* AccountVC */ = {
 			isa = PBXGroup;
 			children = (
-				04B2BBEE2907EFD10055C4E4 /* AccountViewController.xib */,
+				049D2BC129082CDB00E036C4 /* Cell */,
 				04B2BBEF2907EFD10055C4E4 /* AccountViewController.swift */,
+				04B2BBEE2907EFD10055C4E4 /* AccountViewController.xib */,
 			);
 			path = AccountVC;
 			sourceTree = "<group>";
@@ -282,6 +364,8 @@
 				04B2BC022907EFD10055C4E4 /* AddTransactionViewController.xib in Resources */,
 				04B2BBFE2907EFD10055C4E4 /* SignupViewController.xib in Resources */,
 				04B2BBFF2907EFD10055C4E4 /* AccountViewController.xib in Resources */,
+				049D2BC529082CFC00E036C4 /* AccountTableViewCell.xib in Resources */,
+				049D2BDF2908339100E036C4 /* HistoryViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,7 +418,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				049D2BEF290854F500E036C4 /* Investment.swift in Sources */,
+				049D2BC429082CFC00E036C4 /* AccountTableViewCell.swift in Sources */,
+				049D2BE9290854B000E036C4 /* Entertaiment.swift in Sources */,
 				04B2BBFD2907EFD10055C4E4 /* SignupViewController.swift in Sources */,
+				049D2BCB2908324000E036C4 /* ModelTransaction.swift in Sources */,
 				04B2BC002907EFD10055C4E4 /* AccountViewController.swift in Sources */,
 				04B2BBF82907EFD10055C4E4 /* WalletViewController.swift in Sources */,
 				04B2BBA92907EF7A0055C4E4 /* AppDelegate.swift in Sources */,
@@ -342,10 +430,18 @@
 				04B2BBAB2907EF7A0055C4E4 /* SceneDelegate.swift in Sources */,
 				04B2BC032907EFD10055C4E4 /* AddTransactionViewController.swift in Sources */,
 				04B2BBFC2907EFD10055C4E4 /* HomeViewController.swift in Sources */,
+				049D2BCE2908328B00E036C4 /* DBManager.swift in Sources */,
+				049D2BE22908544500E036C4 /* ModelCategory.swift in Sources */,
 				04B2BC012907EFD10055C4E4 /* CustomTabBarController.swift in Sources */,
+				049D2BEC290854DF00E036C4 /* Education.swift in Sources */,
 				04B2BC092907EFFF0055C4E4 /* Extension+UIFont.swift in Sources */,
+				049D2BF52908558C00E036C4 /* Categories.swift in Sources */,
 				04B2BC0A2907EFFF0055C4E4 /* Extension+UIColor.swift in Sources */,
 				04B2BC052907EFD10055C4E4 /* LoginViewController.swift in Sources */,
+				049D2BF22908550D00E036C4 /* Income.swift in Sources */,
+				049D2BDE2908339100E036C4 /* HistoryViewController.swift in Sources */,
+				049D2BD2290832F200E036C4 /* ConvertHelper.swift in Sources */,
+				049D2BE62908549600E036C4 /* Essential.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
