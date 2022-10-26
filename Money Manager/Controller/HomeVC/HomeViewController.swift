@@ -144,43 +144,39 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     // MARK: Custom view in header
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = UIView(frame: .init(x: 0, y: 0, width: tableView.frame.width, height: 40))
-        headerView.backgroundColor = .clear
-        
-        let lblTitleHeader = UILabel(frame: .init(x: 24, y: 0, width: 100, height: 40))
-        headerView.addSubview(lblTitleHeader)
-        lblTitleHeader.center.y = headerView.center.y
-        lblTitleHeader.font = .bold(ofSize: 16)
-        lblTitleHeader.textColor = .black
-        
-        let btnHeader = UIButton(frame: .init(x: headerView.frame.maxX-124, y: 0, width: 100, height: 40))
-        headerView.addSubview(btnHeader)
-        btnHeader.center.y = lblTitleHeader.center.y
-        btnHeader.setTitleColor(.mainColor(), for: .normal)
-        btnHeader.titleLabel?.font = .semibold(ofSize: 14)
-        btnHeader.contentHorizontalAlignment = .right
+
+        let headerView = HeaderView(frame: .init(x: 0, y: 0, width: tableView.frame.width, height: 40))
         
         if section == 2 {
-            lblTitleHeader.text = "History"
-            btnHeader.setTitle("See all", for: .normal)
-            btnHeader.addTarget(self, action: #selector(onHistory(_:)), for: .touchUpInside)
+
+            
+            headerView.configureHeader(title: "History", buttonTitle: "See all")
+            headerView.completion = { [weak self] in
+                guard let strongSelf = self else {return}
+                strongSelf.onHistory()
+                
+            }
             return headerView
         } else if section == 0 {
-            lblTitleHeader.text = "This month"
-            btnHeader.setTitle("View report", for: .normal)
-            btnHeader.addTarget(self, action: #selector(onReport(_:)), for: .touchUpInside)
+    
+            headerView.configureHeader(title: "This month", buttonTitle: "View report")
+            headerView.completion = {[weak self] in
+                guard let strongSelf = self else {return}
+                strongSelf.onReport()
+            }
             return headerView
         } else {
             return nil
         }
+        
     }
     
-    @objc func onReport(_ sender: UIButton) {
+    private func onReport() {
         let vc = ReportViewController()
         present(vc, animated: true)
     }
     
-    @objc func onHistory(_ sender: UIButton) {
+    private func onHistory() {
         let vc = HistoryViewController()
 //        vc.transaction = transaction
         vc.modalPresentationStyle = .fullScreen
@@ -239,21 +235,21 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         } else {
 
             guard let cell = tableView.dequeueReusableCell(withIdentifier: TransactionTableViewCell.identifier, for: indexPath) as? TransactionTableViewCell else { return UITableViewCell() }
-            cell.imgIcon.image = UIImage(systemName: transaction?[indexPath.row].image ?? "")
-            cell.lblName.text = transaction?[indexPath.row].name
-            cell.lblDate.text = ConvertHelper.share.stringFromDate(date: transaction?[indexPath.row].date ?? Date(), format: "dd/MM/yyyy")
+            cell.imageIcon.image = UIImage(systemName: transaction?[indexPath.row].image ?? "")
+            cell.nameLabel.text = transaction?[indexPath.row].name
+            cell.dateLabel.text = ConvertHelper.share.stringFromDate(date: transaction?[indexPath.row].date ?? Date(), format: "dd/MM/yyyy")
 
             let stt = transaction?[indexPath.row].stt ?? ""
             let amount = transaction?[indexPath.row].amount ?? ""
             let a = stt.appending(amount)
 
-            cell.lblAmount.text = a
+            cell.amountLabel.text = a
 
             switch transaction?[indexPath.row].stt {
             case "-":
-                cell.lblAmount.textColor = .expenseColor()
+                cell.amountLabel.textColor = .expenseColor()
             default:
-                cell.lblAmount.textColor = .incomeColor()
+                cell.amountLabel.textColor = .incomeColor()
             }
 
             return cell

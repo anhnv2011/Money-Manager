@@ -56,6 +56,9 @@
 		04D0D4932908E78600162268 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D0D4912908E78600162268 /* CategoryTableViewCell.swift */; };
 		04D0D4942908E78600162268 /* CategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D0D4922908E78600162268 /* CategoryTableViewCell.xib */; };
 		04D0D49B2908EDBC00162268 /* CategoryJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 04D0D49A2908EDBC00162268 /* CategoryJSON.json */; };
+		04D0D49F290949E600162268 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D0D49E290949E600162268 /* HeaderView.swift */; };
+		04D0D4A32909543600162268 /* MonthTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D0D4A12909543600162268 /* MonthTableViewCell.swift */; };
+		04D0D4A42909543600162268 /* MonthTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D0D4A22909543600162268 /* MonthTableViewCell.xib */; };
 		28B03D73EAF7B2EB151CB143 /* Pods_Money_Manager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51B22C44713760849C150E21 /* Pods_Money_Manager.framework */; };
 /* End PBXBuildFile section */
 
@@ -112,6 +115,9 @@
 		04D0D4912908E78600162268 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		04D0D4922908E78600162268 /* CategoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryTableViewCell.xib; sourceTree = "<group>"; };
 		04D0D49A2908EDBC00162268 /* CategoryJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CategoryJSON.json; sourceTree = "<group>"; };
+		04D0D49E290949E600162268 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		04D0D4A12909543600162268 /* MonthTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthTableViewCell.swift; sourceTree = "<group>"; };
+		04D0D4A22909543600162268 /* MonthTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MonthTableViewCell.xib; sourceTree = "<group>"; };
 		14691A730239AD6130AB7CBC /* Pods-Money Manager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Money Manager.release.xcconfig"; path = "Target Support Files/Pods-Money Manager/Pods-Money Manager.release.xcconfig"; sourceTree = "<group>"; };
 		51B22C44713760849C150E21 /* Pods_Money_Manager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Money_Manager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		630BD779A69A3BF51DE1B1BB /* Pods-Money Manager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Money Manager.debug.xcconfig"; path = "Target Support Files/Pods-Money Manager/Pods-Money Manager.debug.xcconfig"; sourceTree = "<group>"; };
@@ -160,6 +166,7 @@
 		049D2BD52908333E00E036C4 /* HistoryVC */ = {
 			isa = PBXGroup;
 			children = (
+				04D0D4A6290955A500162268 /* Cell */,
 				049D2BDC2908339100E036C4 /* HistoryViewController.swift */,
 				049D2BDD2908339100E036C4 /* HistoryViewController.xib */,
 			);
@@ -250,12 +257,12 @@
 		04B2BBE02907EFD10055C4E4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				04D0D48A2908E55C00162268 /* CategoryVC */,
+				04B2BBE72907EFD10055C4E4 /* HomeVC */,
 				04B2BBF02907EFD10055C4E4 /* CustomTabBarController.swift */,
+				04D0D48A2908E55C00162268 /* CategoryVC */,
 				049D2BD52908333E00E036C4 /* HistoryVC */,
 				04B2BBE12907EFD10055C4E4 /* WalletVC */,
 				04B2BBE42907EFD10055C4E4 /* ReportVC */,
-				04B2BBE72907EFD10055C4E4 /* HomeVC */,
 				04B2BBED2907EFD10055C4E4 /* AccountVC */,
 				04B2BBF12907EFD10055C4E4 /* AddTransaction */,
 				04B2BBEA2907EFD10055C4E4 /* SignUp */,
@@ -288,6 +295,7 @@
 				049D2BF72908575800E036C4 /* Cell */,
 				04B2BBE92907EFD10055C4E4 /* HomeViewController.swift */,
 				04B2BBE82907EFD10055C4E4 /* HomeViewController.xib */,
+				04D0D49E290949E600162268 /* HeaderView.swift */,
 			);
 			path = HomeVC;
 			sourceTree = "<group>";
@@ -353,6 +361,15 @@
 			children = (
 				04D0D4912908E78600162268 /* CategoryTableViewCell.swift */,
 				04D0D4922908E78600162268 /* CategoryTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		04D0D4A6290955A500162268 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				04D0D4A12909543600162268 /* MonthTableViewCell.swift */,
+				04D0D4A22909543600162268 /* MonthTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -445,6 +462,7 @@
 				04B2BBDF2907EFBE0055C4E4 /* GoogleService-Info.plist in Resources */,
 				049D2C0C2908593D00E036C4 /* TransactionTableViewCell.xib in Resources */,
 				04B2BBB22907EF7D0055C4E4 /* Assets.xcassets in Resources */,
+				04D0D4A42909543600162268 /* MonthTableViewCell.xib in Resources */,
 				04B2BBFB2907EFD10055C4E4 /* HomeViewController.xib in Resources */,
 				04B2BC022907EFD10055C4E4 /* AddTransactionViewController.xib in Resources */,
 				04B2BBFE2907EFD10055C4E4 /* SignupViewController.xib in Resources */,
@@ -523,6 +541,7 @@
 				049D2BE22908544500E036C4 /* ModelCategory.swift in Sources */,
 				04B2BC012907EFD10055C4E4 /* CustomTabBarController.swift in Sources */,
 				049D2BEC290854DF00E036C4 /* Education.swift in Sources */,
+				04D0D49F290949E600162268 /* HeaderView.swift in Sources */,
 				04B2BC092907EFFF0055C4E4 /* Extension+UIFont.swift in Sources */,
 				049D2BF52908558C00E036C4 /* Categories.swift in Sources */,
 				04B2BC0A2907EFFF0055C4E4 /* Extension+UIColor.swift in Sources */,
@@ -531,6 +550,7 @@
 				049D2BF22908550D00E036C4 /* Income.swift in Sources */,
 				04D0D48D2908E58100162268 /* CategoryViewController.swift in Sources */,
 				049D2C1529085A9B00E036C4 /* AdsTableViewCellCell.swift in Sources */,
+				04D0D4A32909543600162268 /* MonthTableViewCell.swift in Sources */,
 				049D2BDE2908339100E036C4 /* HistoryViewController.swift in Sources */,
 				049D2BD2290832F200E036C4 /* ConvertHelper.swift in Sources */,
 				049D2BE62908549600E036C4 /* Essential.swift in Sources */,
