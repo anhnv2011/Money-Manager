@@ -12,13 +12,14 @@ class SignupViewController: UIViewController {
 
     
     // MARK: IBOutlet
-    @IBOutlet weak var vUser: UIView!
-    @IBOutlet weak var tfUser: UITextField!
-    @IBOutlet weak var vPassword: UIView!
-    @IBOutlet weak var tfPassword: UITextField!
-    @IBOutlet weak var btnShowPassword: UIButton!
-    @IBOutlet weak var btnSignup: UIButton!
-    @IBOutlet weak var btnCheck: UIButton!
+    @IBOutlet weak var userView: UIView!
+    @IBOutlet weak var userTextField: UITextField!
+    @IBOutlet weak var passwordView: UIView!
+    @IBOutlet weak var passwordTextfield: UITextField!
+    @IBOutlet weak var showPasswordButton: UIButton!
+    @IBOutlet weak var signupButton: UIButton!
+    @IBOutlet weak var checkButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
     
     var isCheck = false
     
@@ -29,32 +30,56 @@ class SignupViewController: UIViewController {
     
     // MARK: Setup UI
     func setupUI() {
-        vUser.layer.borderWidth = 1
-        vUser.layer.borderColor = UIColor.borderColor().cgColor
-        vUser.layer.cornerRadius = 10
+        setupSubView()
+        setupTextField()
+        setupButton()
+    }
+    private func setupSubView(){
+        userView.layer.borderWidth = 1
+        userView.layer.borderColor = UIColor.borderColor().cgColor
+        userView.layer.cornerRadius = 10
         
-        vPassword.layer.borderWidth = 1
-        vPassword.layer.borderColor = UIColor.borderColor().cgColor
-        vPassword.layer.cornerRadius = 10
-        
-        tfPassword.isSecureTextEntry = true
-        btnShowPassword.isHidden = true
-        tfPassword.delegate = self
-        
-        btnSignup.layer.cornerRadius = 10
-        btnSignup.layer.opacity = 0.5
+        passwordView.layer.borderWidth = 1
+        passwordView.layer.borderColor = UIColor.borderColor().cgColor
+        passwordView.layer.cornerRadius = 10
     }
     
+    private func setupTextField(){
+        passwordTextfield.isSecureTextEntry = true
+        passwordTextfield.delegate = self
+    }
+    
+    private func setupButton(){
+        signupButton.layer.cornerRadius = 10
+        signupButton.layer.opacity = 0.5
+        showPasswordButton.isHidden = true
+    }
+    @IBAction func buttonAction(_ sender: UIButton) {
+        switch sender {
+        case loginButton:
+            onLogin()
+        case signupButton:
+            signUp()
+        case showPasswordButton:
+            onShowPassword()
+        case checkButton:
+            onCheck()
+        default :
+            break
+        
+        }
+    
+    }
     // MARK: Show Password
-    @IBAction func onShowPassword(_ sender: Any) {
-        tfPassword.isSecureTextEntry = !tfPassword.isSecureTextEntry
-        tfPassword.isSecureTextEntry ? btnShowPassword.setImage(UIImage(systemName: "eye"), for: .normal    ) : btnShowPassword.setImage(UIImage(systemName: "eye.slash"), for: .normal)
+    private func onShowPassword() {
+        passwordTextfield.isSecureTextEntry = !passwordTextfield.isSecureTextEntry
+        passwordTextfield.isSecureTextEntry ? showPasswordButton.setImage(UIImage(systemName: "eye"), for: .normal    ) : showPasswordButton.setImage(UIImage(systemName: "eye.slash"), for: .normal)
     }
     
     // MARK: Sign Up
-    @IBAction func signUp(_ sender: Any) {
-        let user = tfUser.text ?? ""
-        let password = tfPassword.text ?? ""
+    private func signUp() {
+        let user = userTextField.text ?? ""
+        let password = passwordTextfield.text ?? ""
         var errorMessage = ""
         var alertController = UIAlertController()
         let ok = UIAlertAction(title: "OK", style: .cancel)
@@ -80,20 +105,20 @@ class SignupViewController: UIViewController {
         }
     }
     
-    @IBAction func onLogin(_ sender: Any) {
+    private func onLogin() {
         let vc = LoginViewController()
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true)
     }
     
-    @IBAction func onCheck(_ sender: Any) {
+    private func onCheck() {
         if !isCheck {
-            btnCheck.setImage(UIImage(systemName: "checkmark.square.fill"), for: .normal)
-            btnSignup.layer.opacity = 1
+            checkButton.setImage(UIImage(systemName: "checkmark.square.fill"), for: .normal)
+            signupButton.layer.opacity = 1
             isCheck = true
         } else {
-            btnCheck.setImage(UIImage(systemName: "square"), for: .normal)
-            btnSignup.layer.opacity = 0.5
+            checkButton.setImage(UIImage(systemName: "square"), for: .normal)
+            signupButton.layer.opacity = 0.5
             isCheck = false
         }
     }
@@ -107,6 +132,6 @@ extension SignupViewController: UITextFieldDelegate {
         //        } else {
         //            btnShowPassword.isHidden = false
         //        }
-        btnShowPassword.isHidden = textField.text == nil
+        showPasswordButton.isHidden = textField.text == nil
     }
 }

@@ -11,27 +11,35 @@ import RealmSwift
 
 class HomeViewController: UIViewController {
     // MARK: IBOutlet & variable
-    @IBOutlet weak var lblHello: UILabel!
-    @IBOutlet weak var lblUserName: UILabel!
+    @IBOutlet weak var helloLabel: UILabel!
+    @IBOutlet weak var userNameLabel: UILabel!
     
-    @IBOutlet weak var vBalance: UIView!
-    @IBOutlet weak var lblTotalBalance: UILabel!
+    @IBOutlet weak var balanceView: UIView!
+    @IBOutlet weak var totalBalanceLabel: UILabel!
     
     // Header height constraint
     @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
-    // vSub height constraint
+    
+    // subview height constraint
     @IBOutlet weak var subHeaderConstraint: NSLayoutConstraint!
-    // vBalance height constraint
+    
+    // Balance view height constraint
     @IBOutlet weak var balanceHeightConstraint: NSLayoutConstraint!
-    // btnNoti Top constraint
-    @IBOutlet weak var btnNotiTopConstraint: NSLayoutConstraint!
+    
+    //Notibutton Top constraint
+    @IBOutlet weak var notiButtonTopConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     // Header height trước và sau khi scroll
     let maxHeaderHeight: CGFloat = 169
     let minHeaderHeight: CGFloat = 44
-    //vSub height trước và sau khi scroll
+    
+    //Sub view height trước và sau khi scroll
     let maxSubHeight: CGFloat = 128
     let minSubHeight: CGFloat = 44
-    // vBalance height trước và sau khi scroll
+    
+    // Balance view height trước và sau khi scroll
     let maxBalanceHeight: CGFloat = 82
     let minBalanceHeight: CGFloat = 0
     // OffSet trước khi scroll
@@ -42,12 +50,13 @@ class HomeViewController: UIViewController {
     var lastDayOfMonth = Calendar.current.date(from: DateComponents(year: Calendar.current.component(.year, from: Date()), month: Calendar.current.component(.month, from: Date())+1))
     
     // MARK: viewDidLoad
-    @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.isNavigationBarHidden = true
         setupUI()
-        welcomeUser()
+        fetchData()
+        
+       
     }
     
     // MARK: viewWillAppear
@@ -56,46 +65,60 @@ class HomeViewController: UIViewController {
         headerHeightConstraint.constant = maxHeaderHeight
         balanceHeightConstraint.constant = maxBalanceHeight
         subHeaderConstraint.constant = maxSubHeight
-        btnNotiTopConstraint.constant = 18
+        notiButtonTopConstraint.constant = 18
         updateHeader()
         tableView.reloadData()
     }
     
+    //MARK:- Data
+    private func fetchData(){
+        transaction = DataBaseManager.shared.getMonthData(firstDayOfMonth ?? Date(), lastDayOfMonth ?? Date())
+    }
+    
     // MARK: Setup UI
-    func setupUI() {
-        transaction = DBManager.shareInstance.getMonthData(firstDayOfMonth ?? Date(), lastDayOfMonth ?? Date())
+    private func setupUI() {
+        welcomeUser()
+        setupTableView()
+        setupBalanceView()
         
-        vBalance.layer.cornerRadius = 10
-        vBalance.layer.masksToBounds = false
-        vBalance.layer.shadowColor = UIColor.black.cgColor
-        vBalance.layer.shadowOpacity = 0.1
-        vBalance.layer.shadowOffset = .init(width: 0, height: 2)
-        
+       
+    }
+    
+    private func setupTableView(){
         tableView.separatorStyle = .none
         tableView.showsVerticalScrollIndicator = false
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UINib(nibName: "IncomeExpenseTBVC", bundle: nil), forCellReuseIdentifier: "IncomeExpenseTBVC")
-        tableView.register(UINib(nibName: "AdsTBVC", bundle: nil), forCellReuseIdentifier: "AdsTBVC")
-        tableView.register(UINib(nibName: "TransactionTBVC", bundle: nil), forCellReuseIdentifier: "TransactionTBVC")
+        tableView.register(UINib(nibName: "IncomeExpenseTableViewCell", bundle: nil), forCellReuseIdentifier: IncomeExpenseTableViewCell.identifier)
+        tableView.register(UINib(nibName: "AdsTableViewCell", bundle: nil), forCellReuseIdentifier: AdsTableViewCell.identifier)
+        tableView.register(UINib(nibName: "TransactionTableViewCell", bundle: nil), forCellReuseIdentifier: TransactionTableViewCell.identifier)
     }
     
-    // MARK: Welcome Username
+    
+    private func setupBalanceView(){
+        balanceView.layer.cornerRadius = 10
+        balanceView.layer.masksToBounds = false
+        balanceView.layer.shadowColor = UIColor.black.cgColor
+        balanceView.layer.shadowOpacity = 0.1
+        balanceView.layer.shadowOffset = .init(width: 0, height: 2)
+        
+    }
+    
     func welcomeUser() {
         let hourStr = ConvertHelper.share.stringFromDate(date: Date(), format: "HH")
         guard let hourInt = Int(hourStr) else { return }
         
         switch hourInt {
         case 0..<6:
-            lblHello.text = "Good night,"
+            helloLabel.text = "Good night,"
         case 6..<12:
-            lblHello.text = "Good morning,"
+            helloLabel.text = "Good morning,"
         case 12..<18:
-            lblHello.text = "Good afternoon,"
+            helloLabel.text = "Good afternoon,"
         case 18..<24:
-            lblHello.text = "Good evening,"
+            helloLabel.text = "Good evening,"
         default:
-            lblHello.text = "Welcome,"
+            helloLabel.text = "Welcome,"
         }
         
         guard let user = Auth.auth().currentUser else { return }
@@ -103,9 +126,9 @@ class HomeViewController: UIViewController {
             for userInfo in providerData {
                 switch userInfo.providerID {
                 case "facebook.com":
-                    lblUserName.text = user.displayName
+                    userNameLabel.text = user.displayName
                 default:
-                    lblUserName.text = user.email
+                    userNameLabel.text = user.email
                 }
             }
         }
@@ -185,57 +208,57 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        if indexPath.section == 0 {
-//            guard let cell = tableView.dequeueReusableCell(withIdentifier: "IncomeExpenseTBVC", for: indexPath) as? IncomeExpenseTBVC else { return UITableViewCell() }
-//
-//            var totalE: Int = 0
-//            var totalI: Int = 0
-//
-//            for i in 0..<(transaction?.count ?? 0) {
-//                switch transaction?[i].stt {
-//                case "-":
-//                    totalE += (ConvertHelper.share.numberFromCurrencyString(string: transaction?[i].amount! ?? "").intValue)
-//                default:
-//                    totalI += (ConvertHelper.share.numberFromCurrencyString(string: transaction?[i].amount! ?? "").intValue)
-//                }
-//            }
-//
-//            cell.lblExpense.text = ConvertHelper.share.stringFromNumber(currency: totalE)
-//
-//            cell.lblIncome.text = ConvertHelper.share.stringFromNumber(currency: totalI)
-//
-//            lblTotalBalance.text = ConvertHelper.share.stringFromNumber(currency: totalI - totalE)
-//
-//            return cell
-//
-//        } else if indexPath.section == 1 {
-//            guard let cell = tableView.dequeueReusableCell(withIdentifier: "AdsTBVC", for: indexPath) as? AdsTBVC else { return UITableViewCell() }
-//
-//            return cell
-//
-//        } else {
-//
-//            guard let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionTBVC", for: indexPath) as? TransactionTBVC else { return UITableViewCell() }
-//            cell.imgIcon.image = UIImage(systemName: transaction?[indexPath.row].image ?? "")
-//            cell.lblName.text = transaction?[indexPath.row].name
-//            cell.lblDate.text = ConvertHelper.share.stringFromDate(date: transaction?[indexPath.row].date ?? Date(), format: "dd/MM/yyyy")
-//
-//            let stt = transaction?[indexPath.row].stt ?? ""
-//            let amount = transaction?[indexPath.row].amount ?? ""
-//            let a = stt.appending(amount)
-//
-//            cell.lblAmount.text = a
-//
-//            switch transaction?[indexPath.row].stt {
-//            case "-":
-//                cell.lblAmount.textColor = .expenseColor()
-//            default:
-//                cell.lblAmount.textColor = .incomeColor()
-//            }
-//
-//            return cell
-//        }
-            return UITableViewCell()
+        if indexPath.section == 0 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: IncomeExpenseTableViewCell.identifier, for: indexPath) as? IncomeExpenseTableViewCell else { return UITableViewCell() }
+
+            var totalE: Int = 0
+            var totalI: Int = 0
+
+            for i in 0..<(transaction?.count ?? 0) {
+                switch transaction?[i].stt {
+                case "-":
+                    totalE += (ConvertHelper.share.numberFromCurrencyString(string: transaction?[i].amount! ?? "").intValue)
+                default:
+                    totalI += (ConvertHelper.share.numberFromCurrencyString(string: transaction?[i].amount! ?? "").intValue)
+                }
+            }
+
+            cell.expenseLabel.text = ConvertHelper.share.stringFromNumber(currency: totalE)
+
+            cell.incomeLabel.text = ConvertHelper.share.stringFromNumber(currency: totalI)
+
+            totalBalanceLabel.text = ConvertHelper.share.stringFromNumber(currency: totalI - totalE)
+
+            return cell
+
+        } else if indexPath.section == 1 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: AdsTableViewCell.identifier, for: indexPath) as? AdsTableViewCell else { return UITableViewCell() }
+
+            return cell
+
+        } else {
+
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: TransactionTableViewCell.identifier, for: indexPath) as? TransactionTableViewCell else { return UITableViewCell() }
+            cell.imgIcon.image = UIImage(systemName: transaction?[indexPath.row].image ?? "")
+            cell.lblName.text = transaction?[indexPath.row].name
+            cell.lblDate.text = ConvertHelper.share.stringFromDate(date: transaction?[indexPath.row].date ?? Date(), format: "dd/MM/yyyy")
+
+            let stt = transaction?[indexPath.row].stt ?? ""
+            let amount = transaction?[indexPath.row].amount ?? ""
+            let a = stt.appending(amount)
+
+            cell.lblAmount.text = a
+
+            switch transaction?[indexPath.row].stt {
+            case "-":
+                cell.lblAmount.textColor = .expenseColor()
+            default:
+                cell.lblAmount.textColor = .incomeColor()
+            }
+
+            return cell
+        }
+           
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -253,21 +276,21 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         
         if indexPath.section == 2 {
             let delete = UIContextualAction(style: .destructive, title: "Delete") { _, _, _ in
-                DBManager.shareInstance.deleteAnObject(self.transaction?[indexPath.row] ?? Transaction())
+                DataBaseManager.shared.deleteAnObject(self.transaction?[indexPath.row] ?? Transaction())
                 tableView.deleteRows(at: [indexPath], with: .automatic)
                 tableView.reloadData()
             }
             
             let edit = UIContextualAction(style: .normal, title: "Edit") { _, _, _ in
                 let editVC = AddTransactionViewController()
-//                editVC.transaction = self.transaction?[indexPath.row]
-//                editVC.passData = { [weak self] transaction in
-//                    guard let strongSelf = self, let transaction = transaction else { return }
-//                    //                    strongSelf.transaction[indexPath.row] = transaction
-//                    //                    strongSelf.transaction.sort(by: { $1.date ?? Date() < $0.date ?? Date() })
-//                    DBManager.shareInstance.updateObject(strongSelf.transaction?[indexPath.row] ?? Transaction(), transaction)
-//                    strongSelf.tableView.reloadData()
-//                }
+                editVC.transaction = self.transaction?[indexPath.row]
+                editVC.passData = { [weak self] transaction in
+                    guard let strongSelf = self, let transaction = transaction else { return }
+                    //                    strongSelf.transaction[indexPath.row] = transaction
+                    //                    strongSelf.transaction.sort(by: { $1.date ?? Date() < $0.date ?? Date() })
+                    DataBaseManager.shared.updateObject(strongSelf.transaction?[indexPath.row] ?? Transaction(), transaction)
+                    strongSelf.tableView.reloadData()
+                }
                 self.present(editVC, animated: true)
             }
             
@@ -282,28 +305,37 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let scrollDiff = scrollView.contentOffset.y - previousScrollOffSet
         
+        print("scrollView.contentOffset.y", scrollView.contentOffset.y)
+        print("previousScrollOffSet", previousScrollOffSet)
+        print("scrollDiff", scrollDiff)
         let absoluteTop: CGFloat = 0.0
         let absoluteBottom: CGFloat = scrollView.contentSize.height - scrollView.frame.size.height
         let isScrollingDown = scrollDiff > 0 && scrollView.contentOffset.y > absoluteTop
         let isScrollingUp = scrollDiff < 0 && scrollView.contentOffset.y < absoluteBottom
         
-        guard canAnimateHeader(scrollView) else { return }
-        
+//        guard canAnimateHeader(scrollView) else { return }
+//        print("canAnimateHeader", canAnimateHeader)
+        print("isScrollingDown", isScrollingDown)
+        print("isScrollingUp", isScrollingUp)
+        print("----------------------------")
         var newHeaderHeight = headerHeightConstraint.constant
         var newSubHeaderHeight = subHeaderConstraint.constant
         var newBalanceHeight = balanceHeightConstraint.constant
-        var newBtnNotiTopConstraint = btnNotiTopConstraint.constant
+        var newBtnNotiTopConstraint = notiButtonTopConstraint.constant
         
         if isScrollingDown {
+            print("down")
             newHeaderHeight = max(minHeaderHeight, headerHeightConstraint.constant - abs(scrollDiff))
             newSubHeaderHeight = max(minSubHeight, subHeaderConstraint.constant - abs(scrollDiff))
             newBalanceHeight = max(minBalanceHeight, balanceHeightConstraint.constant - abs(scrollDiff))
-            newBtnNotiTopConstraint = max(6, btnNotiTopConstraint.constant - abs(scrollDiff))
+            newBtnNotiTopConstraint = max(6, notiButtonTopConstraint.constant - abs(scrollDiff))
         } else if isScrollingUp {
+            print("up")
+
             newHeaderHeight = min(maxHeaderHeight, headerHeightConstraint.constant + abs(scrollDiff))
             newSubHeaderHeight = min(maxSubHeight, subHeaderConstraint.constant + abs(scrollDiff))
             newBalanceHeight = min(maxBalanceHeight, balanceHeightConstraint.constant + abs(scrollDiff))
-            newBtnNotiTopConstraint = min(18, btnNotiTopConstraint.constant + abs(scrollDiff))
+            newBtnNotiTopConstraint = min(18, notiButtonTopConstraint.constant + abs(scrollDiff))
         }
         
         // Tính theo view có height contraint thay đổi lớn nhất trong 2 view
@@ -312,7 +344,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             headerHeightConstraint.constant = newHeaderHeight
             subHeaderConstraint.constant = newSubHeaderHeight
             balanceHeightConstraint.constant = newBalanceHeight
-            btnNotiTopConstraint.constant = newBtnNotiTopConstraint
+            notiButtonTopConstraint.constant = newBtnNotiTopConstraint
             updateHeader()
             setScrollPosition(previousScrollOffSet)
         }
@@ -334,11 +366,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 // MARK: - Extension HomeVC
 // Animate header when scroll
 extension HomeViewController {
-    func canAnimateHeader(_ scrollView: UIScrollView) -> Bool {
-        // Tính theo height constraint của view nhỏ nhât trong 2 view thay đổi height constraint
-        let scrollMaxViewHeight = scrollView.frame.height + balanceHeightConstraint.constant - minBalanceHeight
-        return scrollView.contentSize.height > scrollMaxViewHeight
-    }
+//    func canAnimateHeader(_ scrollView: UIScrollView) -> Bool {
+//        // Tính theo height constraint của view nhỏ nhât trong 2 view thay đổi height constraint
+//        let scrollMaxViewHeight = scrollView.frame.height + balanceHeightConstraint.constant - minBalanceHeight
+//        print("scrollMaxViewHeight", scrollMaxViewHeight)
+//        return scrollView.contentSize.height > scrollMaxViewHeight
+//    }
     
     func setScrollPosition(_ position: CGFloat) {
         tableView.contentOffset = CGPoint(x: tableView.contentOffset.x, y: position)
@@ -362,7 +395,7 @@ extension HomeViewController {
             self.headerHeightConstraint.constant = self.minHeaderHeight
             self.subHeaderConstraint.constant = self.minSubHeight
             self.balanceHeightConstraint.constant = self.minBalanceHeight
-            self.btnNotiTopConstraint.constant = 6
+            self.notiButtonTopConstraint.constant = 6
             self.updateHeader()
             self.view.layoutIfNeeded()
         })
@@ -374,7 +407,7 @@ extension HomeViewController {
             self.headerHeightConstraint.constant = self.maxHeaderHeight
             self.subHeaderConstraint.constant = self.maxSubHeight
             self.balanceHeightConstraint.constant = self.maxBalanceHeight
-            self.btnNotiTopConstraint.constant = 18
+            self.notiButtonTopConstraint.constant = 18
             self.updateHeader()
             self.view.layoutIfNeeded()
         })
@@ -385,8 +418,8 @@ extension HomeViewController {
         let range = maxBalanceHeight - minBalanceHeight
         let openAmount = balanceHeightConstraint.constant - minBalanceHeight
         let percentage = openAmount/range
-        vBalance.alpha = percentage
-        lblHello.alpha = percentage
-        lblUserName.alpha = percentage
+        balanceView.alpha = percentage
+        helloLabel.alpha = percentage
+        userNameLabel.alpha = percentage
     }
 }

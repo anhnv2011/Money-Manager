@@ -10,7 +10,6 @@ import FirebaseAuth
 import FirebaseCore
 import FirebaseFirestore
 import GoogleSignIn
-//import FBSDKLoginKit
 import FBSDKLoginKit
 class LoginViewController: UIViewController {
 
@@ -32,7 +31,14 @@ class LoginViewController: UIViewController {
     }
 
     // MARK: Setup UI
-    func setupUI() {
+    private func setupUI() {
+       
+        setupSubView()
+        setupTextField()
+        setupButton()
+    }
+    
+    private func setupSubView(){
         userView.layer.borderWidth = 1
         userView.layer.borderColor = UIColor.borderColor().cgColor
         userView.layer.cornerRadius = 10
@@ -40,12 +46,17 @@ class LoginViewController: UIViewController {
         passwordView.layer.borderWidth = 1
         passwordView.layer.borderColor = UIColor.borderColor().cgColor
         passwordView.layer.cornerRadius = 10
-        
+    }
+    
+    private func setupTextField(){
         passwordTextField.isSecureTextEntry = true
-        showPasswordButton.isHidden = true
         passwordTextField.delegate = self
+    }
+    
+    private func setupButton(){
         
-        loginButton.layer.cornerRadius = 10
+         showPasswordButton.isHidden = true
+         loginButton.layer.cornerRadius = 10
     }
     
     //MARK:- Button Action
@@ -82,6 +93,8 @@ class LoginViewController: UIViewController {
         passwordTextField.isSecureTextEntry = !passwordTextField.isSecureTextEntry
         passwordTextField.isSecureTextEntry ? showPasswordButton.setImage(UIImage(systemName: "eye"), for: .normal    ) : showPasswordButton.setImage(UIImage(systemName: "eye.slash"), for: .normal)
     }
+    
+    // MARK: Login with Google
     private func loginWithGoogle(){
         guard let clientID = FirebaseApp.app()?.options.clientID else { return }
         // Create Google Sign In configuration object.
@@ -188,12 +201,7 @@ class LoginViewController: UIViewController {
 // MARK: - Extention TextFieldDelegate
 extension LoginViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        //        if textField.text != nil {
-        //            btnShowPassword.isHidden = false
-        //        } else {
-        //            btnShowPassword.isHidden = true
-        //        }
+   
         showPasswordButton.isHidden = textField.text == nil
     }
 }
-//com.googleusercontent.apps.576522880604-q8iup2bg23m1e07j54bsi10gbs2m1m6r

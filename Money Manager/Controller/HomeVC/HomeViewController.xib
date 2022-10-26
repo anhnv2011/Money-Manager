@@ -10,6 +10,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Money_Manager" customModuleProvider="target">
             <connections>
+                <outlet property="balanceHeightConstraint" destination="ILJ-nh-Dd3" id="ctp-yo-giG"/>
+                <outlet property="balanceView" destination="5wY-87-Pgb" id="aft-vj-Tbr"/>
+                <outlet property="headerHeightConstraint" destination="fm6-99-hQt" id="3wZ-vr-Lod"/>
+                <outlet property="helloLabel" destination="XIu-em-d2b" id="mfY-sb-WTw"/>
+                <outlet property="notiButtonTopConstraint" destination="AN9-N6-IA8" id="5Sn-Rf-Dxm"/>
+                <outlet property="subHeaderConstraint" destination="hke-LM-VAi" id="mb7-60-5DE"/>
+                <outlet property="tableView" destination="Ua4-Qa-PW4" id="aLG-KA-T4G"/>
+                <outlet property="totalBalanceLabel" destination="9n3-8g-2Jz" id="x0z-1k-86b"/>
+                <outlet property="userNameLabel" destination="hJs-fS-5w6" id="It5-vi-erC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -103,7 +112,7 @@
                         <constraint firstItem="aJi-S6-raU" firstAttribute="leading" secondItem="6Ac-Mf-Vpz" secondAttribute="leading" id="veH-Ua-h6q"/>
                     </constraints>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ua4-Qa-PW4">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" bouncesZoom="NO" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Ua4-Qa-PW4">
                     <rect key="frame" x="0.0" y="213" width="414" height="649"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>

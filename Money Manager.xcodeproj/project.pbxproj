@@ -10,7 +10,7 @@
 		049D2BC429082CFC00E036C4 /* AccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D2BC229082CFC00E036C4 /* AccountTableViewCell.swift */; };
 		049D2BC529082CFC00E036C4 /* AccountTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049D2BC329082CFC00E036C4 /* AccountTableViewCell.xib */; };
 		049D2BCB2908324000E036C4 /* ModelTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D2BCA2908324000E036C4 /* ModelTransaction.swift */; };
-		049D2BCE2908328B00E036C4 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D2BCD2908328B00E036C4 /* DBManager.swift */; };
+		049D2BCE2908328B00E036C4 /* DataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D2BCD2908328B00E036C4 /* DataBaseManager.swift */; };
 		049D2BD2290832F200E036C4 /* ConvertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D2BD1290832F200E036C4 /* ConvertHelper.swift */; };
 		049D2BDE2908339100E036C4 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D2BDC2908339100E036C4 /* HistoryViewController.swift */; };
 		049D2BDF2908339100E036C4 /* HistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049D2BDD2908339100E036C4 /* HistoryViewController.xib */; };
@@ -21,6 +21,14 @@
 		049D2BEF290854F500E036C4 /* Investment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D2BEE290854F500E036C4 /* Investment.swift */; };
 		049D2BF22908550D00E036C4 /* Income.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D2BF12908550D00E036C4 /* Income.swift */; };
 		049D2BF52908558C00E036C4 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D2BF42908558C00E036C4 /* Categories.swift */; };
+		049D2BFA2908578200E036C4 /* IncomeExpenseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D2BF82908578200E036C4 /* IncomeExpenseTableViewCell.swift */; };
+		049D2BFB2908578200E036C4 /* IncomeExpenseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049D2BF92908578200E036C4 /* IncomeExpenseTableViewCell.xib */; };
+		049D2BFF290857B100E036C4 /* AdsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D2BFD290857B100E036C4 /* AdsTableViewCell.swift */; };
+		049D2C00290857B100E036C4 /* AdsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049D2BFE290857B100E036C4 /* AdsTableViewCell.xib */; };
+		049D2C0B2908593D00E036C4 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D2C092908593D00E036C4 /* TransactionTableViewCell.swift */; };
+		049D2C0C2908593D00E036C4 /* TransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049D2C0A2908593D00E036C4 /* TransactionTableViewCell.xib */; };
+		049D2C1529085A9B00E036C4 /* AdsTableViewCellCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D2C1329085A9B00E036C4 /* AdsTableViewCellCell.swift */; };
+		049D2C1629085A9B00E036C4 /* AdsTableViewCellCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049D2C1429085A9B00E036C4 /* AdsTableViewCellCell.xib */; };
 		04B2BBA92907EF7A0055C4E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B2BBA82907EF7A0055C4E4 /* AppDelegate.swift */; };
 		04B2BBAB2907EF7A0055C4E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B2BBAA2907EF7A0055C4E4 /* SceneDelegate.swift */; };
 		04B2BBB22907EF7D0055C4E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04B2BBB12907EF7D0055C4E4 /* Assets.xcassets */; };
@@ -43,6 +51,11 @@
 		04B2BC052907EFD10055C4E4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B2BBF62907EFD10055C4E4 /* LoginViewController.swift */; };
 		04B2BC092907EFFF0055C4E4 /* Extension+UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B2BC072907EFFF0055C4E4 /* Extension+UIFont.swift */; };
 		04B2BC0A2907EFFF0055C4E4 /* Extension+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B2BC082907EFFF0055C4E4 /* Extension+UIColor.swift */; };
+		04D0D48D2908E58100162268 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D0D48B2908E58100162268 /* CategoryViewController.swift */; };
+		04D0D48E2908E58100162268 /* CategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D0D48C2908E58100162268 /* CategoryViewController.xib */; };
+		04D0D4932908E78600162268 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D0D4912908E78600162268 /* CategoryTableViewCell.swift */; };
+		04D0D4942908E78600162268 /* CategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D0D4922908E78600162268 /* CategoryTableViewCell.xib */; };
+		04D0D49B2908EDBC00162268 /* CategoryJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 04D0D49A2908EDBC00162268 /* CategoryJSON.json */; };
 		28B03D73EAF7B2EB151CB143 /* Pods_Money_Manager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51B22C44713760849C150E21 /* Pods_Money_Manager.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +64,7 @@
 		049D2BC229082CFC00E036C4 /* AccountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewCell.swift; sourceTree = "<group>"; };
 		049D2BC329082CFC00E036C4 /* AccountTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountTableViewCell.xib; sourceTree = "<group>"; };
 		049D2BCA2908324000E036C4 /* ModelTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTransaction.swift; sourceTree = "<group>"; };
-		049D2BCD2908328B00E036C4 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		049D2BCD2908328B00E036C4 /* DataBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseManager.swift; sourceTree = "<group>"; };
 		049D2BD1290832F200E036C4 /* ConvertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertHelper.swift; sourceTree = "<group>"; };
 		049D2BDC2908339100E036C4 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		049D2BDD2908339100E036C4 /* HistoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryViewController.xib; sourceTree = "<group>"; };
@@ -62,6 +75,14 @@
 		049D2BEE290854F500E036C4 /* Investment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Investment.swift; sourceTree = "<group>"; };
 		049D2BF12908550D00E036C4 /* Income.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Income.swift; sourceTree = "<group>"; };
 		049D2BF42908558C00E036C4 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		049D2BF82908578200E036C4 /* IncomeExpenseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeExpenseTableViewCell.swift; sourceTree = "<group>"; };
+		049D2BF92908578200E036C4 /* IncomeExpenseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IncomeExpenseTableViewCell.xib; sourceTree = "<group>"; };
+		049D2BFD290857B100E036C4 /* AdsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsTableViewCell.swift; sourceTree = "<group>"; };
+		049D2BFE290857B100E036C4 /* AdsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdsTableViewCell.xib; sourceTree = "<group>"; };
+		049D2C092908593D00E036C4 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
+		049D2C0A2908593D00E036C4 /* TransactionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionTableViewCell.xib; sourceTree = "<group>"; };
+		049D2C1329085A9B00E036C4 /* AdsTableViewCellCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsTableViewCellCell.swift; sourceTree = "<group>"; };
+		049D2C1429085A9B00E036C4 /* AdsTableViewCellCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdsTableViewCellCell.xib; sourceTree = "<group>"; };
 		04B2BBA52907EF7A0055C4E4 /* Money Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Money Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04B2BBA82907EF7A0055C4E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04B2BBAA2907EF7A0055C4E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +107,11 @@
 		04B2BBF62907EFD10055C4E4 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		04B2BC072907EFFF0055C4E4 /* Extension+UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UIFont.swift"; sourceTree = "<group>"; };
 		04B2BC082907EFFF0055C4E4 /* Extension+UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UIColor.swift"; sourceTree = "<group>"; };
+		04D0D48B2908E58100162268 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		04D0D48C2908E58100162268 /* CategoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryViewController.xib; sourceTree = "<group>"; };
+		04D0D4912908E78600162268 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		04D0D4922908E78600162268 /* CategoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryTableViewCell.xib; sourceTree = "<group>"; };
+		04D0D49A2908EDBC00162268 /* CategoryJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CategoryJSON.json; sourceTree = "<group>"; };
 		14691A730239AD6130AB7CBC /* Pods-Money Manager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Money Manager.release.xcconfig"; path = "Target Support Files/Pods-Money Manager/Pods-Money Manager.release.xcconfig"; sourceTree = "<group>"; };
 		51B22C44713760849C150E21 /* Pods_Money_Manager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Money_Manager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		630BD779A69A3BF51DE1B1BB /* Pods-Money Manager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Money Manager.debug.xcconfig"; path = "Target Support Files/Pods-Money Manager/Pods-Money Manager.debug.xcconfig"; sourceTree = "<group>"; };
@@ -117,7 +143,7 @@
 			children = (
 				049D2BE42908547800E036C4 /* Category */,
 				049D2BCA2908324000E036C4 /* ModelTransaction.swift */,
-				049D2BCD2908328B00E036C4 /* DBManager.swift */,
+				049D2BCD2908328B00E036C4 /* DataBaseManager.swift */,
 				049D2BF42908558C00E036C4 /* Categories.swift */,
 			);
 			path = Model;
@@ -153,10 +179,42 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		049D2BF72908575800E036C4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				049D2C082908590300E036C4 /* AdsCell */,
+				049D2BF82908578200E036C4 /* IncomeExpenseTableViewCell.swift */,
+				049D2BF92908578200E036C4 /* IncomeExpenseTableViewCell.xib */,
+				049D2C092908593D00E036C4 /* TransactionTableViewCell.swift */,
+				049D2C0A2908593D00E036C4 /* TransactionTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		049D2C07290858DD00E036C4 /* Collection cell */ = {
+			isa = PBXGroup;
+			children = (
+				049D2C1329085A9B00E036C4 /* AdsTableViewCellCell.swift */,
+				049D2C1429085A9B00E036C4 /* AdsTableViewCellCell.xib */,
+			);
+			path = "Collection cell";
+			sourceTree = "<group>";
+		};
+		049D2C082908590300E036C4 /* AdsCell */ = {
+			isa = PBXGroup;
+			children = (
+				049D2C07290858DD00E036C4 /* Collection cell */,
+				049D2BFD290857B100E036C4 /* AdsTableViewCell.swift */,
+				049D2BFE290857B100E036C4 /* AdsTableViewCell.xib */,
+			);
+			path = AdsCell;
+			sourceTree = "<group>";
+		};
 		04B2BB9C2907EF7A0055C4E4 = {
 			isa = PBXGroup;
 			children = (
 				04B2BBDE2907EFBE0055C4E4 /* GoogleService-Info.plist */,
+				04D0D49A2908EDBC00162268 /* CategoryJSON.json */,
 				04B2BBA72907EF7A0055C4E4 /* Money Manager */,
 				04B2BBA62907EF7A0055C4E4 /* Products */,
 				E34BFC5A63CC8342D0954149 /* Pods */,
@@ -192,12 +250,13 @@
 		04B2BBE02907EFD10055C4E4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				04D0D48A2908E55C00162268 /* CategoryVC */,
+				04B2BBF02907EFD10055C4E4 /* CustomTabBarController.swift */,
 				049D2BD52908333E00E036C4 /* HistoryVC */,
 				04B2BBE12907EFD10055C4E4 /* WalletVC */,
 				04B2BBE42907EFD10055C4E4 /* ReportVC */,
 				04B2BBE72907EFD10055C4E4 /* HomeVC */,
 				04B2BBED2907EFD10055C4E4 /* AccountVC */,
-				04B2BBF02907EFD10055C4E4 /* CustomTabBarController.swift */,
 				04B2BBF12907EFD10055C4E4 /* AddTransaction */,
 				04B2BBEA2907EFD10055C4E4 /* SignUp */,
 				04B2BBF42907EFD10055C4E4 /* Login */,
@@ -226,6 +285,7 @@
 		04B2BBE72907EFD10055C4E4 /* HomeVC */ = {
 			isa = PBXGroup;
 			children = (
+				049D2BF72908575800E036C4 /* Cell */,
 				04B2BBE92907EFD10055C4E4 /* HomeViewController.swift */,
 				04B2BBE82907EFD10055C4E4 /* HomeViewController.xib */,
 			);
@@ -276,6 +336,25 @@
 				04B2BC082907EFFF0055C4E4 /* Extension+UIColor.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		04D0D48A2908E55C00162268 /* CategoryVC */ = {
+			isa = PBXGroup;
+			children = (
+				04D0D4902908E58800162268 /* Cell */,
+				04D0D48B2908E58100162268 /* CategoryViewController.swift */,
+				04D0D48C2908E58100162268 /* CategoryViewController.xib */,
+			);
+			path = CategoryVC;
+			sourceTree = "<group>";
+		};
+		04D0D4902908E58800162268 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				04D0D4912908E78600162268 /* CategoryTableViewCell.swift */,
+				04D0D4922908E78600162268 /* CategoryTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		DF708F12FEAA9C1E0ABB0AA7 /* Frameworks */ = {
@@ -354,15 +433,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				049D2BFB2908578200E036C4 /* IncomeExpenseTableViewCell.xib in Resources */,
 				04B2BBB52907EF7D0055C4E4 /* LaunchScreen.storyboard in Resources */,
 				04B2BBF72907EFD10055C4E4 /* WalletViewController.xib in Resources */,
+				04D0D4942908E78600162268 /* CategoryTableViewCell.xib in Resources */,
 				04B2BC042907EFD10055C4E4 /* LoginViewController.xib in Resources */,
+				049D2C1629085A9B00E036C4 /* AdsTableViewCellCell.xib in Resources */,
+				04D0D48E2908E58100162268 /* CategoryViewController.xib in Resources */,
 				04B2BBF92907EFD10055C4E4 /* ReportViewController.xib in Resources */,
+				04D0D49B2908EDBC00162268 /* CategoryJSON.json in Resources */,
 				04B2BBDF2907EFBE0055C4E4 /* GoogleService-Info.plist in Resources */,
+				049D2C0C2908593D00E036C4 /* TransactionTableViewCell.xib in Resources */,
 				04B2BBB22907EF7D0055C4E4 /* Assets.xcassets in Resources */,
 				04B2BBFB2907EFD10055C4E4 /* HomeViewController.xib in Resources */,
 				04B2BC022907EFD10055C4E4 /* AddTransactionViewController.xib in Resources */,
 				04B2BBFE2907EFD10055C4E4 /* SignupViewController.xib in Resources */,
+				049D2C00290857B100E036C4 /* AdsTableViewCell.xib in Resources */,
 				04B2BBFF2907EFD10055C4E4 /* AccountViewController.xib in Resources */,
 				049D2BC529082CFC00E036C4 /* AccountTableViewCell.xib in Resources */,
 				049D2BDF2908339100E036C4 /* HistoryViewController.xib in Resources */,
@@ -418,10 +504,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				049D2BFF290857B100E036C4 /* AdsTableViewCell.swift in Sources */,
 				049D2BEF290854F500E036C4 /* Investment.swift in Sources */,
 				049D2BC429082CFC00E036C4 /* AccountTableViewCell.swift in Sources */,
 				049D2BE9290854B000E036C4 /* Entertaiment.swift in Sources */,
 				04B2BBFD2907EFD10055C4E4 /* SignupViewController.swift in Sources */,
+				04D0D4932908E78600162268 /* CategoryTableViewCell.swift in Sources */,
+				049D2BFA2908578200E036C4 /* IncomeExpenseTableViewCell.swift in Sources */,
 				049D2BCB2908324000E036C4 /* ModelTransaction.swift in Sources */,
 				04B2BC002907EFD10055C4E4 /* AccountViewController.swift in Sources */,
 				04B2BBF82907EFD10055C4E4 /* WalletViewController.swift in Sources */,
@@ -430,15 +519,18 @@
 				04B2BBAB2907EF7A0055C4E4 /* SceneDelegate.swift in Sources */,
 				04B2BC032907EFD10055C4E4 /* AddTransactionViewController.swift in Sources */,
 				04B2BBFC2907EFD10055C4E4 /* HomeViewController.swift in Sources */,
-				049D2BCE2908328B00E036C4 /* DBManager.swift in Sources */,
+				049D2BCE2908328B00E036C4 /* DataBaseManager.swift in Sources */,
 				049D2BE22908544500E036C4 /* ModelCategory.swift in Sources */,
 				04B2BC012907EFD10055C4E4 /* CustomTabBarController.swift in Sources */,
 				049D2BEC290854DF00E036C4 /* Education.swift in Sources */,
 				04B2BC092907EFFF0055C4E4 /* Extension+UIFont.swift in Sources */,
 				049D2BF52908558C00E036C4 /* Categories.swift in Sources */,
 				04B2BC0A2907EFFF0055C4E4 /* Extension+UIColor.swift in Sources */,
+				049D2C0B2908593D00E036C4 /* TransactionTableViewCell.swift in Sources */,
 				04B2BC052907EFD10055C4E4 /* LoginViewController.swift in Sources */,
 				049D2BF22908550D00E036C4 /* Income.swift in Sources */,
+				04D0D48D2908E58100162268 /* CategoryViewController.swift in Sources */,
+				049D2C1529085A9B00E036C4 /* AdsTableViewCellCell.swift in Sources */,
 				049D2BDE2908339100E036C4 /* HistoryViewController.swift in Sources */,
 				049D2BD2290832F200E036C4 /* ConvertHelper.swift in Sources */,
 				049D2BE62908549600E036C4 /* Essential.swift in Sources */,

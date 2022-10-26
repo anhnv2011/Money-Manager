@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="KGk-i7-Jjw" customClass="IncomeExpenseTableViewCell" customModule="Money_Manager" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="334" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="334" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="CFx-Mu-Qvl">
+                        <rect key="frame" x="24" y="0.0" width="286" height="100"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="eo6-8q-Bk3">
+                                <rect key="frame" x="0.0" y="0.0" width="143" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Income" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ga-Bk-1LM">
+                                        <rect key="frame" x="0.0" y="0.0" width="143" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pu-4A-Toh">
+                                        <rect key="frame" x="0.0" y="50" width="143" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Qqv-YE-r7c">
+                                <rect key="frame" x="143" y="0.0" width="143" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expense" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfq-vm-O44">
+                                        <rect key="frame" x="0.0" y="0.0" width="143" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOH-Vo-2Ws">
+                                        <rect key="frame" x="0.0" y="50" width="143" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qTA-6k-oNp" userLabel="vLine">
+                        <rect key="frame" x="166.5" y="0.0" width="1" height="100"/>
+                        <color key="backgroundColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="1" id="enL-33-j9X"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="CFx-Mu-Qvl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="OOV-Mc-CQs"/>
+                    <constraint firstItem="qTA-6k-oNp" firstAttribute="height" secondItem="CFx-Mu-Qvl" secondAttribute="height" id="WbU-QF-Ykw"/>
+                    <constraint firstItem="qTA-6k-oNp" firstAttribute="centerY" secondItem="CFx-Mu-Qvl" secondAttribute="centerY" id="gJB-JG-DDx"/>
+                    <constraint firstAttribute="bottom" secondItem="CFx-Mu-Qvl" secondAttribute="bottom" id="ife-ww-flT"/>
+                    <constraint firstItem="qTA-6k-oNp" firstAttribute="centerX" secondItem="CFx-Mu-Qvl" secondAttribute="centerX" id="kl4-vI-b2f"/>
+                    <constraint firstItem="CFx-Mu-Qvl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="uUc-dh-IdX"/>
+                    <constraint firstAttribute="trailing" secondItem="CFx-Mu-Qvl" secondAttribute="trailing" constant="24" id="ydP-V5-UlK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="contentStackView" destination="CFx-Mu-Qvl" id="E7n-Zq-wcm"/>
+                <outlet property="expenseLabel" destination="DOH-Vo-2Ws" id="XOO-Ak-q8l"/>
+                <outlet property="incomeLabel" destination="9pu-4A-Toh" id="vCP-Ox-dZT"/>
+            </connections>
+            <point key="canvasLocation" x="60.869565217391312" y="84.375"/>
+        </tableViewCell>
+    </objects>
+</document>

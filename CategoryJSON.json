@@ -1,0 +1,28 @@
+{ "categories": [
+    {
+        "category": "essentials",
+        "name": ["House Rent", "Electricity/Water", "Foods", "Petroleum", "Gas", "Internet", "Telephone"],
+        "image": ["house.fill", "bolt.fill", "tuningfork", "drop.fill", "flame.fill", "wifi", "phone.fill"]
+    },
+    {
+        "category": "entertaiments",
+        "name": ["Shopping", "Cinema", "Game", "Sport", "Spa"],
+        "image": ["cart.fill", "ticket.fill", "gamecontroller.fill", "sportscourt.fill", "leaf.fill"]
+    },
+    {
+        "category": "educations",
+        "name": ["Book", "Education"],
+        "image": ["book.fill", "bag.fill"]
+    },
+    {
+        "category": "investments",
+        "name": ["Coin", "Securities", "Real Estate"],
+        "image": ["bitcoinsign.circle.fill", "chart.bar.xaxis", "globe"]
+    },
+    {
+        "category": "incomes",
+        "name": ["Salary", "Freelancer", "Investment"],
+        "image": ["dollarsign.circle.fill", "network", "chart.bar.xaxis"]
+    }
+]
+}

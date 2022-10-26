@@ -8,9 +8,9 @@
 import Foundation
 import RealmSwift
 
-class DBManager {
+class DataBaseManager {
     private var database: Realm
-    static let shareInstance = DBManager()
+    static let shared = DataBaseManager()
     
     private init() {
         database = try!Realm()
