@@ -20,7 +20,7 @@ pod 'SwiftyJSON', '~> 4.0'
 pod 'RealmSwift', '~>10'
  ## Ảnh chụp màn hình
 
- <kbd><img src="Money-Manager/Demo/Image/Login.png" alt="Login" width="250"/></kbd> 
+ <kbd><img src="Money Manager/Demo/Image/Login.png" alt="Login" width="250"/></kbd> 
  <kbd><img src="Money-Manager/Demo/Image/GoogleLogin.png" alt="GoogleLogin" width="250"/></kbd> 
  <kbd><img src="Money-Manager/Demo/Image/FaceBookLogin.png" alt="FaceBookLogin" width="250"/></kbd> 
  <kbd><img src="Money-Manager/Demo/Image/AddNew.png" alt="AddNew" width="250"/></kbd> 
