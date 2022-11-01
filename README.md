@@ -11,15 +11,17 @@
 
 ## Thư viện
 pod 'FirebaseAuth'
-pod 'FirebaseFirestore'
 
 pod 'FBSDKLoginKit', '~> 12'
 
 pod 'GoogleSignIn'
 
 pod "MonthYearPicker", '~> 4.0.2'
+
 pod 'Charts'
+
 pod 'SwiftyJSON'
+
 pod 'RealmSwift', '~>10'
  ## Ảnh chụp màn hình
 
