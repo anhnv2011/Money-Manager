@@ -65,6 +65,15 @@
 		04D0D4A42909543600162268 /* MonthTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D0D4A22909543600162268 /* MonthTableViewCell.xib */; };
 		04EEAD1C2910D6AE002D39BE /* CombinedChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EEAD1A2910D6AE002D39BE /* CombinedChartTableViewCell.swift */; };
 		04EEAD1D2910D6AE002D39BE /* CombinedChartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04EEAD1B2910D6AE002D39BE /* CombinedChartTableViewCell.xib */; };
+		04EEAD522911A4A4002D39BE /* Login.png in Resources */ = {isa = PBXBuildFile; fileRef = 04EEAD512911A4A3002D39BE /* Login.png */; };
+		04EEAD562911A5C4002D39BE /* GoogleLogin.png in Resources */ = {isa = PBXBuildFile; fileRef = 04EEAD552911A5C4002D39BE /* GoogleLogin.png */; };
+		04EEAD5A2911A5F3002D39BE /* FaceBookLogin.png in Resources */ = {isa = PBXBuildFile; fileRef = 04EEAD592911A5F3002D39BE /* FaceBookLogin.png */; };
+		04EEAD5D2911A62D002D39BE /* Home.png in Resources */ = {isa = PBXBuildFile; fileRef = 04EEAD5C2911A62D002D39BE /* Home.png */; };
+		04EEAD612911A64D002D39BE /* MonthReport.png in Resources */ = {isa = PBXBuildFile; fileRef = 04EEAD602911A64D002D39BE /* MonthReport.png */; };
+		04EEAD642911A696002D39BE /* YearReport.png in Resources */ = {isa = PBXBuildFile; fileRef = 04EEAD632911A696002D39BE /* YearReport.png */; };
+		04EEAD682911A6C2002D39BE /* AddNew.png in Resources */ = {isa = PBXBuildFile; fileRef = 04EEAD672911A6C1002D39BE /* AddNew.png */; };
+		04EEAD6C2911A6DC002D39BE /* Category.png in Resources */ = {isa = PBXBuildFile; fileRef = 04EEAD6B2911A6DC002D39BE /* Category.png */; };
+		04EEAD702911A749002D39BE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 04EEAD6F2911A749002D39BE /* README.md */; };
 		28B03D73EAF7B2EB151CB143 /* Pods_Money_Manager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51B22C44713760849C150E21 /* Pods_Money_Manager.framework */; };
 /* End PBXBuildFile section */
 
@@ -130,6 +139,15 @@
 		04D0D4A22909543600162268 /* MonthTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MonthTableViewCell.xib; sourceTree = "<group>"; };
 		04EEAD1A2910D6AE002D39BE /* CombinedChartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinedChartTableViewCell.swift; sourceTree = "<group>"; };
 		04EEAD1B2910D6AE002D39BE /* CombinedChartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CombinedChartTableViewCell.xib; sourceTree = "<group>"; };
+		04EEAD512911A4A3002D39BE /* Login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Login.png; sourceTree = "<group>"; };
+		04EEAD552911A5C4002D39BE /* GoogleLogin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GoogleLogin.png; sourceTree = "<group>"; };
+		04EEAD592911A5F3002D39BE /* FaceBookLogin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FaceBookLogin.png; sourceTree = "<group>"; };
+		04EEAD5C2911A62D002D39BE /* Home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Home.png; sourceTree = "<group>"; };
+		04EEAD602911A64D002D39BE /* MonthReport.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MonthReport.png; sourceTree = "<group>"; };
+		04EEAD632911A696002D39BE /* YearReport.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YearReport.png; sourceTree = "<group>"; };
+		04EEAD672911A6C1002D39BE /* AddNew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AddNew.png; sourceTree = "<group>"; };
+		04EEAD6B2911A6DC002D39BE /* Category.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Category.png; sourceTree = "<group>"; };
+		04EEAD6F2911A749002D39BE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		14691A730239AD6130AB7CBC /* Pods-Money Manager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Money Manager.release.xcconfig"; path = "Target Support Files/Pods-Money Manager/Pods-Money Manager.release.xcconfig"; sourceTree = "<group>"; };
 		51B22C44713760849C150E21 /* Pods_Money_Manager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Money_Manager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		630BD779A69A3BF51DE1B1BB /* Pods-Money Manager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Money Manager.debug.xcconfig"; path = "Target Support Files/Pods-Money Manager/Pods-Money Manager.debug.xcconfig"; sourceTree = "<group>"; };
@@ -245,6 +263,7 @@
 		04B2BB9C2907EF7A0055C4E4 = {
 			isa = PBXGroup;
 			children = (
+				04EEAD6F2911A749002D39BE /* README.md */,
 				04B2BBDE2907EFBE0055C4E4 /* GoogleService-Info.plist */,
 				04D0D49A2908EDBC00162268 /* CategoryJSON.json */,
 				04B2BBA72907EF7A0055C4E4 /* Money Manager */,
@@ -265,11 +284,12 @@
 		04B2BBA72907EF7A0055C4E4 /* Money Manager */ = {
 			isa = PBXGroup;
 			children = (
-				049D2BD0290832E300E036C4 /* Helper */,
+				04B2BBE02907EFD10055C4E4 /* Controller */,
 				049D2BC92908321800E036C4 /* Model */,
+				049D2BD0290832E300E036C4 /* Helper */,
 				049D2B802908096000E036C4 /* Money Manager.entitlements */,
 				04B2BC062907EFFF0055C4E4 /* Extension */,
-				04B2BBE02907EFD10055C4E4 /* Controller */,
+				04EEAD4A2911A3AF002D39BE /* Demo */,
 				04B2BBA82907EF7A0055C4E4 /* AppDelegate.swift */,
 				04B2BBAA2907EF7A0055C4E4 /* SceneDelegate.swift */,
 				04B2BBB12907EF7D0055C4E4 /* Assets.xcassets */,
@@ -282,8 +302,8 @@
 		04B2BBE02907EFD10055C4E4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				04B2BBE72907EFD10055C4E4 /* HomeVC */,
 				04B2BBF02907EFD10055C4E4 /* CustomTabBarController.swift */,
+				04B2BBE72907EFD10055C4E4 /* HomeVC */,
 				04D0D48A2908E55C00162268 /* CategoryVC */,
 				049D2BD52908333E00E036C4 /* HistoryVC */,
 				04B2BBE12907EFD10055C4E4 /* WalletVC */,
@@ -400,6 +420,37 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		04EEAD4A2911A3AF002D39BE /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				04EEAD4C2911A3C2002D39BE /* Gif */,
+				04EEAD4B2911A3BA002D39BE /* Image */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		04EEAD4B2911A3BA002D39BE /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				04EEAD512911A4A3002D39BE /* Login.png */,
+				04EEAD552911A5C4002D39BE /* GoogleLogin.png */,
+				04EEAD592911A5F3002D39BE /* FaceBookLogin.png */,
+				04EEAD5C2911A62D002D39BE /* Home.png */,
+				04EEAD672911A6C1002D39BE /* AddNew.png */,
+				04EEAD6B2911A6DC002D39BE /* Category.png */,
+				04EEAD602911A64D002D39BE /* MonthReport.png */,
+				04EEAD632911A696002D39BE /* YearReport.png */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		04EEAD4C2911A3C2002D39BE /* Gif */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Gif;
+			sourceTree = "<group>";
+		};
 		DF708F12FEAA9C1E0ABB0AA7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -482,23 +533,32 @@
 				048704F3290989B200EC8F76 /* ReportTableViewCell.xib in Resources */,
 				04D0D4942908E78600162268 /* CategoryTableViewCell.xib in Resources */,
 				04B2BC042907EFD10055C4E4 /* LoginViewController.xib in Resources */,
+				04EEAD642911A696002D39BE /* YearReport.png in Resources */,
 				049D2C1629085A9B00E036C4 /* AdsTableViewCellCell.xib in Resources */,
 				04D0D48E2908E58100162268 /* CategoryViewController.xib in Resources */,
 				04B2BBF92907EFD10055C4E4 /* ReportViewController.xib in Resources */,
+				04EEAD6C2911A6DC002D39BE /* Category.png in Resources */,
 				04D0D49B2908EDBC00162268 /* CategoryJSON.json in Resources */,
 				048704EE2909888D00EC8F76 /* PieChartTableViewCell.xib in Resources */,
 				04B2BBDF2907EFBE0055C4E4 /* GoogleService-Info.plist in Resources */,
 				049D2C0C2908593D00E036C4 /* TransactionTableViewCell.xib in Resources */,
 				04B2BBB22907EF7D0055C4E4 /* Assets.xcassets in Resources */,
+				04EEAD5D2911A62D002D39BE /* Home.png in Resources */,
 				04D0D4A42909543600162268 /* MonthTableViewCell.xib in Resources */,
+				04EEAD612911A64D002D39BE /* MonthReport.png in Resources */,
 				04B2BBFB2907EFD10055C4E4 /* HomeViewController.xib in Resources */,
 				04B2BC022907EFD10055C4E4 /* AddTransactionViewController.xib in Resources */,
 				04B2BBFE2907EFD10055C4E4 /* SignupViewController.xib in Resources */,
+				04EEAD702911A749002D39BE /* README.md in Resources */,
 				049D2C00290857B100E036C4 /* AdsTableViewCell.xib in Resources */,
+				04EEAD562911A5C4002D39BE /* GoogleLogin.png in Resources */,
 				04B2BBFF2907EFD10055C4E4 /* AccountViewController.xib in Resources */,
 				049D2BC529082CFC00E036C4 /* AccountTableViewCell.xib in Resources */,
+				04EEAD522911A4A4002D39BE /* Login.png in Resources */,
 				04EEAD1D2910D6AE002D39BE /* CombinedChartTableViewCell.xib in Resources */,
+				04EEAD682911A6C2002D39BE /* AddNew.png in Resources */,
 				049D2BDF2908339100E036C4 /* HistoryViewController.xib in Resources */,
+				04EEAD5A2911A5F3002D39BE /* FaceBookLogin.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
