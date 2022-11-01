@@ -25,11 +25,13 @@ class DataBaseManager {
     
     func getData() -> Results<Transaction> {
         let results: Results<Transaction> = database.objects(Transaction.self).sorted(byKeyPath: "date", ascending: false)
+        
         return results
     }
     
     func getMonthData(_ beginningOfMonth: Date, _ endOfMonth: Date) -> Results<Transaction> {
         let results: Results<Transaction> = database.objects(Transaction.self).filter("date >= %@ AND date < %@", beginningOfMonth, endOfMonth).sorted(byKeyPath: "date", ascending: false)
+//        print("getMonthData", results)
         return results
     }
     

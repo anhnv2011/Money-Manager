@@ -8,26 +8,28 @@
 import UIKit
 
 class AddTransactionViewController: UIViewController {
-
+    
     // MARK: IBOutlet & var
-    @IBOutlet weak var vSafe: UIView!
-    @IBOutlet weak var vLine: UIView!
+    @IBOutlet weak var safeView: UIView!
+    @IBOutlet weak var lineView: UIView!
     
-    @IBOutlet weak var btnExpense: UIButton!
-    @IBOutlet weak var btnIncome: UIButton!
+    @IBOutlet weak var expenseButton: UIButton!
+    @IBOutlet weak var incomeButton: UIButton!
+    @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var dismissButton: UIButton!
+    @IBOutlet weak var categoryButton: UIButton!
     
-    @IBOutlet weak var vCategory: UIView!
-    @IBOutlet weak var vAmount: UIView!
-    @IBOutlet weak var vDate: UIView!
+    @IBOutlet weak var categoryView: UIView!
+    @IBOutlet weak var amountView: UIView!
+    @IBOutlet weak var dateView: UIView!
     
-    @IBOutlet weak var imgIcon: UIImageView!
-    @IBOutlet weak var iconWithConstraint: NSLayoutConstraint!
+    @IBOutlet weak var iconImageView: UIImageView!
+    @IBOutlet weak var iconWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var categoryLeadingConstraint: NSLayoutConstraint!
-    @IBOutlet weak var tfCategory: UITextField!
-    @IBOutlet weak var tfAmount: UITextField!
-    @IBOutlet weak var tfDate: UITextField!
+    @IBOutlet weak var categoryTextField: UITextField!
+    @IBOutlet weak var amountTextField: UITextField!
+    @IBOutlet weak var dateTextField: UITextField!
     
-    @IBOutlet weak var btnSave: UIButton!
     var currentString = ""
     
     // MARK: datePicker
@@ -44,12 +46,11 @@ class AddTransactionViewController: UIViewController {
     var category = ""
     var imgStr = ""
     var transaction: Transaction?
-    var passData: ((_ transaction: Transaction?) -> Void)?
+    var saveCompletion: ((_ transaction: Transaction?) -> Void)?
     
     // MARK: viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        tfAmount.delegate = self
         setupUI()
         configNavigationBar()
     }
@@ -59,78 +60,96 @@ class AddTransactionViewController: UIViewController {
         super.viewDidAppear(animated)
         guard let transaction = transaction else { return }
         if transaction.stt == "+" {
-            addIncome(self)
+            addIncome()
         }
-        iconWithConstraint.constant = 24
+        iconWidthConstraint.constant = 24
         categoryLeadingConstraint.constant = 8
         imgStr = transaction.image ?? ""
-        imgIcon.image = UIImage(systemName: transaction.image ?? "")
+        iconImageView.image = UIImage(systemName: transaction.image ?? "")
         category = transaction.category ?? ""
-        tfCategory.text = transaction.name
-        tfAmount.text = transaction.amount
-        tfDate.text = ConvertHelper.share.stringFromDate(date: transaction.date ?? Date(), format: "dd MMM yyyy")
+        categoryTextField.text = transaction.name
+        amountTextField.text = transaction.amount
+        dateTextField.text = ConvertHelper.share.stringFromDate(date: transaction.date ?? Date(), format: "dd MMM yyyy")
     }
     
-    @IBAction func onBack(_ sender: Any) {
-        //        let vc = CustomTabBarController()
-        //        navigationController?.pushViewController(vc, animated: true)
+    //MARK:- ButtonAction
+    @IBAction func buttonAction(_ sender: UIButton) {
+        switch sender {
+        case dismissButton:
+            dismiss()
+        case expenseButton:
+            addExpense()
+        case incomeButton:
+            addIncome()
+        case categoryButton:
+            enterCategory()
+        case saveButton:
+            saveNewTransaction()
+        default:
+            break
+        
+        }
+        
+    }
+    private func dismiss() {
+        
         dismiss(animated: true)
     }
     
     // MARK: Add Expense
-    @IBAction func addExpense(_ sender: Any) {
-        btnSave.tag = 0
-        btnExpense.tintColor = .mainColor()
-        btnExpense.titleLabel?.font = .semibold(ofSize: 16)
-        btnIncome.tintColor = .black
-        btnIncome.titleLabel?.font = .medium(ofSize: 16)
+    private func addExpense() {
+        saveButton.tag = 0
+        expenseButton.tintColor = .mainColor()
+        expenseButton.titleLabel?.font = .semibold(ofSize: 16)
+        incomeButton.tintColor = .black
+        incomeButton.titleLabel?.font = .medium(ofSize: 16)
         
         UIView.animate(withDuration: 0.05, delay: 0, options: .curveLinear, animations: {
-            self.vLine.transform = CGAffineTransform(translationX: self.vLine.bounds.width*CGFloat((self.btnSave.tag)), y: 0)
+            self.lineView.transform = CGAffineTransform(translationX: self.lineView.bounds.width*CGFloat((self.saveButton.tag)), y: 0)
         }, completion: nil)
     }
     
     // MARK: Add Income
-    @IBAction func addIncome(_ sender: Any) {
-        btnSave.tag = 1
-        btnExpense.titleLabel?.font = .medium(ofSize: 16)
-        btnExpense.tintColor = .black
-        btnIncome.tintColor = .mainColor()
-        btnIncome.titleLabel?.font = .semibold(ofSize: 16)
+    private func addIncome() {
+        saveButton.tag = 1
+        expenseButton.titleLabel?.font = .medium(ofSize: 16)
+        expenseButton.tintColor = .black
+        incomeButton.tintColor = .mainColor()
+        incomeButton.titleLabel?.font = .semibold(ofSize: 16)
         
         UIView.animate(withDuration: 0.05, delay: 0, options: .curveLinear, animations: {
-            self.vLine.transform = CGAffineTransform(translationX: self.vLine.bounds.width*CGFloat((self.btnSave.tag)), y: 0)
+            self.lineView.transform = CGAffineTransform(translationX: self.lineView.bounds.width*CGFloat((self.saveButton.tag)), y: 0)
         }, completion: nil)
     }
     
     // MARK: Add Category
-    @IBAction func enterCategory(_ sender: Any) {
+    private func enterCategory() {
         let vc = CategoryViewController()
         vc.passData = { [weak self] category, name, image, imageWidth, leadingTextField in
             guard let strongSelf = self, let category = category, let name = name, let image = image else { return }
             strongSelf.category = category
-            strongSelf.tfCategory.text = name
+            strongSelf.categoryTextField.text = name
             strongSelf.imgStr = image
-            strongSelf.imgIcon.image = UIImage(systemName: image)
-            strongSelf.iconWithConstraint.constant = imageWidth
+            strongSelf.iconImageView.image = UIImage(systemName: image)
+            strongSelf.iconWidthConstraint.constant = imageWidth
             strongSelf.categoryLeadingConstraint.constant = leadingTextField
         }
         present(vc, animated: true)
     }
     
     // MARK: Save
-    @IBAction func onSave(_ sender: Any) {
-        let date = ConvertHelper.share.dateFormString(string: tfDate.text ?? "", format: "dd MMM yyyy")
-        if tfCategory.text != "" && tfAmount.text != "" && tfDate.text != "" {
-            if btnSave.tag == 0 {
-                transaction = Transaction(category: category, image: imgStr, name: tfCategory.text, date: date, amount: tfAmount.text, stt: "-")
-            } else if btnSave.tag == 1 {
-                transaction = Transaction(category: category, image: imgStr, name: tfCategory.text, date: date, amount: tfAmount.text, stt: "+")
+    private func saveNewTransaction() {
+        let date = ConvertHelper.share.dateFormString(string: dateTextField.text ?? "", format: "dd MMM yyyy")
+        if categoryTextField.text != "" && amountTextField.text != "" && dateTextField.text != "" {
+            if saveButton.tag == 0 {
+                transaction = Transaction(category: category, image: imgStr, name: categoryTextField.text, date: date, amount: amountTextField.text, stt: "-")
+            } else if saveButton.tag == 1 {
+                transaction = Transaction(category: category, image: imgStr, name: categoryTextField.text, date: date, amount: amountTextField.text, stt: "+")
             }
             
             // Load data now to another VC by NotificationCenter
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadData"), object: nil)
-            passData?(transaction)
+            saveCompletion?(transaction)
             dismiss(animated: true)
             //        navigationController?.popViewController(animated: true)
         } else {
@@ -143,11 +162,11 @@ class AddTransactionViewController: UIViewController {
     
     // MARK: Picker action
     @objc func handleDatePicker(_ sender: UIDatePicker) {
-        tfDate.text = ConvertHelper.share.stringFromDate(date: sender.date, format: "dd MMM yyyy")
+        dateTextField.text = ConvertHelper.share.stringFromDate(date: sender.date, format: "dd MMM yyyy")
     }
     
     @objc func datePickerDone() {
-        tfDate.resignFirstResponder()
+        dateTextField.resignFirstResponder()
     }
     
     // MARK: Set NavigationBar
@@ -163,36 +182,48 @@ class AddTransactionViewController: UIViewController {
     }
     
     // MARK: Setup UI
-    func setupUI() {
-        vLine.backgroundColor = .mainColor()
+    private func setupUI() {
+        setupSubView()
+        setupTextField()
+        setupButton()
         
-        vCategory.layer.borderWidth = 1
-        vCategory.layer.borderColor = UIColor.borderColor().cgColor
-        vCategory.layer.cornerRadius = 10
+    }
+    
+    private func setupSubView(){
+        lineView.backgroundColor = .mainColor()
         
-        vAmount.layer.borderWidth = 1
-        vAmount.layer.borderColor = UIColor.borderColor().cgColor
-        vAmount.layer.cornerRadius = 10
+        categoryView.layer.borderWidth = 1
+        categoryView.layer.borderColor = UIColor.borderColor().cgColor
+        categoryView.layer.cornerRadius = 10
         
-        vDate.layer.borderWidth = 1
-        vDate.layer.borderColor = UIColor.borderColor().cgColor
-        vDate.layer.cornerRadius = 10
+        amountView.layer.borderWidth = 1
+        amountView.layer.borderColor = UIColor.borderColor().cgColor
+        amountView.layer.cornerRadius = 10
         
-        btnSave.layer.cornerRadius = 10
-        btnSave.tintColor = .mainColor()
-        btnSave.tag = 0
-        
-        tfAmount.keyboardType = .numberPad
-        tfDate.placeholder = ConvertHelper.share.stringFromDate(date: Date(), format: "EEE, dd MMM yyyy")
-        tfDate.text = ConvertHelper.share.stringFromDate(date: Date(), format: "dd MMM yyyy")
+        dateView.layer.borderWidth = 1
+        dateView.layer.borderColor = UIColor.borderColor().cgColor
+        dateView.layer.cornerRadius = 10
+    }
+    
+    private func setupTextField(){
+        amountTextField.delegate = self
+
+        amountTextField.keyboardType = .numberPad
+        dateTextField.placeholder = ConvertHelper.share.stringFromDate(date: Date(), format: "EEE, dd MMM yyyy")
+        dateTextField.text = ConvertHelper.share.stringFromDate(date: Date(), format: "dd MMM yyyy")
         // Setup Date Picker input Text Field
-        tfDate.inputView = datePicker
+        dateTextField.inputView = datePicker
         datePicker.addTarget(self, action: #selector(handleDatePicker(_:)), for: .valueChanged)
-        // Set btnDone in datePicker view
+        // Set doneButton in datePicker view
         let doneButton = UIBarButtonItem.init(title: "Done", style: .done, target: self, action: #selector(self.datePickerDone))
         let toolBar = UIToolbar.init(frame: CGRect(x: 0, y: 0, width: view.bounds.size.width, height: 44))
         toolBar.setItems([UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil), doneButton], animated: true)
-        tfDate.inputAccessoryView = toolBar
+        dateTextField.inputAccessoryView = toolBar
+    }
+    private func setupButton(){
+        saveButton.layer.cornerRadius = 10
+        saveButton.tintColor = .mainColor()
+        saveButton.tag = 0
     }
     
     // MARK: Currenct Fomatter in TextField
@@ -201,7 +232,7 @@ class AddTransactionViewController: UIViewController {
         formatter.numberStyle = NumberFormatter.Style.currency
         formatter.locale = NSLocale(localeIdentifier: "vi_VN") as Locale
         let numberFromField = NSString(string: currentString).doubleValue
-        tfAmount.text = formatter.string(from: NSNumber(value: numberFromField))
+        amountTextField.text = formatter.string(from: NSNumber(value: numberFromField))
     }
 }
 

@@ -10,20 +10,22 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddTransactionViewController" customModule="Money_Manager" customModuleProvider="target">
             <connections>
-                <outlet property="btnExpense" destination="SD2-rE-mv1" id="EVF-l0-lXQ"/>
-                <outlet property="btnIncome" destination="6ip-0P-Apq" id="9Ha-wG-AfL"/>
-                <outlet property="btnSave" destination="Rua-6S-6Pk" id="b0U-x2-jXr"/>
+                <outlet property="amountTextField" destination="pgM-9Y-LRL" id="hrI-Z5-hDn"/>
+                <outlet property="amountView" destination="0ja-V2-GAo" id="db7-pA-Qd2"/>
+                <outlet property="categoryButton" destination="CVk-CV-Srs" id="iTl-QM-RKT"/>
                 <outlet property="categoryLeadingConstraint" destination="lkB-gq-93m" id="Ti9-eF-qJv"/>
-                <outlet property="iconWithConstraint" destination="irB-h4-JSm" id="lsj-gI-9C0"/>
-                <outlet property="imgIcon" destination="iCH-ai-UV1" id="Ety-AR-zpa"/>
-                <outlet property="tfAmount" destination="pgM-9Y-LRL" id="hrI-Z5-hDn"/>
-                <outlet property="tfCategory" destination="rPv-D7-N5e" id="Hxg-eV-A39"/>
-                <outlet property="tfDate" destination="HST-qB-lgH" id="aJz-vn-a2w"/>
-                <outlet property="vAmount" destination="0ja-V2-GAo" id="db7-pA-Qd2"/>
-                <outlet property="vCategory" destination="Nbi-0M-Tbf" id="eqL-IN-jBw"/>
-                <outlet property="vDate" destination="KFc-r0-ae1" id="yr7-ZZ-Zgf"/>
-                <outlet property="vLine" destination="Gtv-VE-eG7" id="gjX-em-BQL"/>
-                <outlet property="vSafe" destination="EUc-VY-DP8" id="0wX-vX-abl"/>
+                <outlet property="categoryTextField" destination="rPv-D7-N5e" id="Hxg-eV-A39"/>
+                <outlet property="categoryView" destination="Nbi-0M-Tbf" id="eqL-IN-jBw"/>
+                <outlet property="dateTextField" destination="HST-qB-lgH" id="aJz-vn-a2w"/>
+                <outlet property="dateView" destination="KFc-r0-ae1" id="yr7-ZZ-Zgf"/>
+                <outlet property="dismissButton" destination="BkB-ZG-WEY" id="XlQ-WI-DQJ"/>
+                <outlet property="expenseButton" destination="SD2-rE-mv1" id="EVF-l0-lXQ"/>
+                <outlet property="iconImageView" destination="iCH-ai-UV1" id="Ety-AR-zpa"/>
+                <outlet property="iconWidthConstraint" destination="irB-h4-JSm" id="lsj-gI-9C0"/>
+                <outlet property="incomeButton" destination="6ip-0P-Apq" id="9Ha-wG-AfL"/>
+                <outlet property="lineView" destination="Gtv-VE-eG7" id="gjX-em-BQL"/>
+                <outlet property="safeView" destination="EUc-VY-DP8" id="0wX-vX-abl"/>
+                <outlet property="saveButton" destination="Rua-6S-6Pk" id="b0U-x2-jXr"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -42,8 +44,8 @@
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EUc-VY-DP8" userLabel="vSafe">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                    <color key="backgroundColor" red="0.0" green="0.68627450980000004" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
-                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" systemColor="linkColor"/>
+                    <color key="tintColor" systemColor="linkColor"/>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Oep-T7-t86">
                     <rect key="frame" x="0.0" y="106" width="414" height="44"/>
@@ -51,11 +53,11 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SD2-rE-mv1">
                             <rect key="frame" x="0.0" y="0.0" width="207" height="44"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                            <color key="tintColor" red="0.0" green="0.68627450980000004" blue="0.94117647059999998" alpha="0.8980392157" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" systemColor="linkColor"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" title="New Expense"/>
                             <connections>
-                                <action selector="addExpense:" destination="-1" eventType="touchUpInside" id="br6-JW-Pri"/>
+                                <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="zJv-zR-LwL"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ip-0P-Apq">
@@ -65,7 +67,7 @@
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" title="New Income"/>
                             <connections>
-                                <action selector="addIncome:" destination="-1" eventType="touchUpInside" id="15i-fw-Lda"/>
+                                <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="bdH-LP-Mt7"/>
                             </connections>
                         </button>
                     </subviews>
@@ -83,7 +85,7 @@
                     <color key="tintColor" red="0.0" green="0.68627450980000004" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
                     <state key="normal" title="Add"/>
                     <connections>
-                        <action selector="onSave:" destination="-1" eventType="touchUpInside" id="yd6-rm-9R5"/>
+                        <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="8l0-Qm-Ttz"/>
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0xg-Ku-uyY" userLabel="vNavigation">
@@ -105,12 +107,12 @@
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" image="chevron.backward" catalog="system"/>
                             <connections>
-                                <action selector="onBack:" destination="-1" eventType="touchUpInside" id="ewY-QO-ZfN"/>
+                                <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="q4j-yz-Yof"/>
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" red="0.0" green="0.68627450980000004" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
-                    <color key="tintColor" red="0.0" green="0.68627450980000004" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" systemColor="linkColor"/>
+                    <color key="tintColor" systemColor="linkColor"/>
                     <constraints>
                         <constraint firstItem="5aP-iW-JAh" firstAttribute="centerY" secondItem="0xg-Ku-uyY" secondAttribute="centerY" id="3mJ-Sn-UdS"/>
                         <constraint firstItem="BkB-ZG-WEY" firstAttribute="centerY" secondItem="0xg-Ku-uyY" secondAttribute="centerY" id="GEj-Fs-Brt"/>
@@ -154,7 +156,7 @@
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" image="chevron.down" catalog="system"/>
                                             <connections>
-                                                <action selector="enterCategory:" destination="-1" eventType="touchUpInside" id="Omz-CS-mLz"/>
+                                                <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="ibW-c6-qyg"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -280,6 +282,9 @@
         <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="chevron.down" catalog="system" width="128" height="72"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

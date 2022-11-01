@@ -50,8 +50,9 @@ class ConvertHelper {
     func convertToDict(name: [String], amount: [Int]) -> [String: Int] {
         var result: [String: Int] = [:]
         for i in 0..<name.count {
-            let total = result[name[i]] ?? 0
-            result[name[i]] = total + amount[i]
+//
+            result[name[i]] = amount[i]
+
         }
         return result
     }

@@ -49,7 +49,6 @@ class CategoryViewController: UIViewController {
         }
         
         let jsonData = json["categories"].arrayValue
-        print(jsonData)
         for item in jsonData {
             let category = Categories(item)
             datas.append(category)

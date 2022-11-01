@@ -17,13 +17,12 @@ class Transaction: Object {
     @objc dynamic var date: Date?
     @objc dynamic var amount: String?
     @objc dynamic var stt: String?
-//    @objc dynamic var color: UIColor?
     override class func primaryKey() -> String? {
         return "ID"
     }
     
     convenience init(category: String?, image: String?, name: String?, date: Date?, amount: String?, stt: String) {
-//        convenience init(image: String?, name: String?, date: Date?, amount: String?, stt: String) {
+
         self.init()
         self.category = category
         self.image = image

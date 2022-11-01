@@ -112,10 +112,9 @@ class CustomTabBarController: UITabBarController {
         let firstDayOfMonth = Calendar.current.date(from: Calendar.current.dateComponents([.year, .month], from: Date()))
         let lastDayOfMonth = Calendar.current.date(from: DateComponents(year: Calendar.current.component(.year, from: Date()), month: Calendar.current.component(.month, from: Date())+1))
         
-        vc.passData = {[weak self] transaction in
+        vc.saveCompletion = {[weak self] transaction in
             guard let strongSelf = self, let transaction = transaction else { return }
-            //            strongSelf.controller1.transaction.insert(transaction, at: 0)
-            //            strongSelf.controller1.transaction.sort(by: { $1.date ?? Date() < $0.date ?? Date() })
+           
             DataBaseManager.shared.addData(transaction)
             strongSelf.controller1.transaction = DataBaseManager.shared.getMonthData(firstDayOfMonth ?? Date(), lastDayOfMonth ?? Date())
             strongSelf.controller1.tableView.reloadData()

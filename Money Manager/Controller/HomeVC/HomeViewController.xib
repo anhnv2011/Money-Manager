@@ -29,7 +29,7 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DaV-6d-m7E" userLabel="Status View">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                    <color key="backgroundColor" red="0.0" green="0.68627450980000004" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" systemColor="linkColor"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ac-Mf-Vpz" userLabel="vHeader">
                     <rect key="frame" x="0.0" y="44" width="414" height="169"/>
@@ -65,7 +65,7 @@
                                     <state key="normal" image="bell.fill" catalog="system"/>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" red="0.0" green="0.68627450980000004" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" systemColor="linkColor"/>
                             <constraints>
                                 <constraint firstItem="gFT-t4-sVe" firstAttribute="leading" secondItem="aJi-S6-raU" secondAttribute="leading" constant="24" id="0ku-Z6-MN2"/>
                                 <constraint firstItem="hHx-ih-Vot" firstAttribute="top" secondItem="aJi-S6-raU" secondAttribute="top" constant="18" id="AN9-N6-IA8"/>
@@ -137,6 +137,9 @@
     </objects>
     <resources>
         <image name="bell.fill" catalog="system" width="128" height="124"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

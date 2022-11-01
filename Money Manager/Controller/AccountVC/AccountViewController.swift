@@ -27,17 +27,23 @@ class AccountViewController: UIViewController {
     // MARK: Setup UI
     func setupUI() {
         avatarImage.tintColor = .mainColor()
+        setupTableView()
+        getUserData()
         
+    }
+    
+    private func setupTableView(){
         tableView.backgroundColor = .borderColor()
-        if #available(iOS 15.0, *) {        // Xoá line phân cách và padding giữa section và cell
-            //            tableView.sectionHeaderTopPadding = 0.0
-        }
         tableView.bounces = false
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "AccountTableViewCell", bundle: nil), forCellReuseIdentifier: AccountTableViewCell.identifier)
+        tableView.tableFooterView = UIView()
+    }
+    
+    // MARK: Get user avatar
+    private func getUserData(){
         
-        // MARK: Get user avatar
         if let user = Auth.auth().currentUser {
             guard let urlImage = user.photoURL else { return }
             do {

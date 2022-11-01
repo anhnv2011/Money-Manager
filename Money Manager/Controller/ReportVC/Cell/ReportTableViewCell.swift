@@ -1,22 +1,20 @@
 //
-//  AccountTableViewCell.swift
+//  ReportTableViewCell.swift
 //  Money Manager
 //
-//  Created by MAC on 10/25/22.
+//  Created by MAC on 10/26/22.
 //
 
 import UIKit
 
-class AccountTableViewCell: UITableViewCell {
-
-    static let identifier = "AccountTableViewCell"
+class ReportTableViewCell: UITableViewCell {
+    @IBOutlet weak var lblName: UILabel!
+    @IBOutlet weak var lblAmount: UILabel!
     
-    //MARK:-
-    @IBOutlet weak var settingLabel: UILabel!
-    
+    static let identifier = "ReportTableViewCell"
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.selectionStyle = .none
+        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

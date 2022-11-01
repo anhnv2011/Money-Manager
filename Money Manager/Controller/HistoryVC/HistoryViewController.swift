@@ -137,7 +137,7 @@ extension HistoryViewController: UITableViewDelegate, UITableViewDataSource {
             let edit = UIContextualAction(style: .normal, title: "Edit") { _, _, _ in
                 let editVC = AddTransactionViewController()
                 editVC.transaction = self.transaction?[indexPath.row]
-                editVC.passData = { [weak self] transaction in
+                editVC.saveCompletion = { [weak self] transaction in
                     guard let strongSelf = self, let transaction = transaction else { return }
                     DataBaseManager.shared.updateObject(strongSelf.transaction?[indexPath.row] ?? Transaction(), transaction)
                     strongSelf.tableView.reloadData()

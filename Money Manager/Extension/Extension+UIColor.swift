@@ -10,7 +10,7 @@ import UIKit
 
 extension UIColor {
     class func mainColor() -> UIColor {
-        return UIColor(red: 0.00, green: 0.69, blue: 0.94, alpha: 1.00)
+        return UIColor.link
     }
     
     class func incomeColor() -> UIColor {

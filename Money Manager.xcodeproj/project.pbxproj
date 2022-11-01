@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		048704ED2909888D00EC8F76 /* PieChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048704EB2909888D00EC8F76 /* PieChartTableViewCell.swift */; };
+		048704EE2909888D00EC8F76 /* PieChartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048704EC2909888D00EC8F76 /* PieChartTableViewCell.xib */; };
+		048704F2290989B200EC8F76 /* ReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048704F0290989B200EC8F76 /* ReportTableViewCell.swift */; };
+		048704F3290989B200EC8F76 /* ReportTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048704F1290989B200EC8F76 /* ReportTableViewCell.xib */; };
 		049D2BC429082CFC00E036C4 /* AccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D2BC229082CFC00E036C4 /* AccountTableViewCell.swift */; };
 		049D2BC529082CFC00E036C4 /* AccountTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049D2BC329082CFC00E036C4 /* AccountTableViewCell.xib */; };
 		049D2BCB2908324000E036C4 /* ModelTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D2BCA2908324000E036C4 /* ModelTransaction.swift */; };
@@ -59,10 +63,16 @@
 		04D0D49F290949E600162268 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D0D49E290949E600162268 /* HeaderView.swift */; };
 		04D0D4A32909543600162268 /* MonthTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D0D4A12909543600162268 /* MonthTableViewCell.swift */; };
 		04D0D4A42909543600162268 /* MonthTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D0D4A22909543600162268 /* MonthTableViewCell.xib */; };
+		04EEAD1C2910D6AE002D39BE /* CombinedChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EEAD1A2910D6AE002D39BE /* CombinedChartTableViewCell.swift */; };
+		04EEAD1D2910D6AE002D39BE /* CombinedChartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04EEAD1B2910D6AE002D39BE /* CombinedChartTableViewCell.xib */; };
 		28B03D73EAF7B2EB151CB143 /* Pods_Money_Manager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51B22C44713760849C150E21 /* Pods_Money_Manager.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		048704EB2909888D00EC8F76 /* PieChartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartTableViewCell.swift; sourceTree = "<group>"; };
+		048704EC2909888D00EC8F76 /* PieChartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PieChartTableViewCell.xib; sourceTree = "<group>"; };
+		048704F0290989B200EC8F76 /* ReportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportTableViewCell.swift; sourceTree = "<group>"; };
+		048704F1290989B200EC8F76 /* ReportTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportTableViewCell.xib; sourceTree = "<group>"; };
 		049D2B802908096000E036C4 /* Money Manager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Money Manager.entitlements"; sourceTree = "<group>"; };
 		049D2BC229082CFC00E036C4 /* AccountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewCell.swift; sourceTree = "<group>"; };
 		049D2BC329082CFC00E036C4 /* AccountTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountTableViewCell.xib; sourceTree = "<group>"; };
@@ -118,6 +128,8 @@
 		04D0D49E290949E600162268 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		04D0D4A12909543600162268 /* MonthTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthTableViewCell.swift; sourceTree = "<group>"; };
 		04D0D4A22909543600162268 /* MonthTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MonthTableViewCell.xib; sourceTree = "<group>"; };
+		04EEAD1A2910D6AE002D39BE /* CombinedChartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinedChartTableViewCell.swift; sourceTree = "<group>"; };
+		04EEAD1B2910D6AE002D39BE /* CombinedChartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CombinedChartTableViewCell.xib; sourceTree = "<group>"; };
 		14691A730239AD6130AB7CBC /* Pods-Money Manager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Money Manager.release.xcconfig"; path = "Target Support Files/Pods-Money Manager/Pods-Money Manager.release.xcconfig"; sourceTree = "<group>"; };
 		51B22C44713760849C150E21 /* Pods_Money_Manager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Money_Manager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		630BD779A69A3BF51DE1B1BB /* Pods-Money Manager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Money Manager.debug.xcconfig"; path = "Target Support Files/Pods-Money Manager/Pods-Money Manager.debug.xcconfig"; sourceTree = "<group>"; };
@@ -135,6 +147,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		048704EA2909887300EC8F76 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				048704EB2909888D00EC8F76 /* PieChartTableViewCell.swift */,
+				048704EC2909888D00EC8F76 /* PieChartTableViewCell.xib */,
+				048704F0290989B200EC8F76 /* ReportTableViewCell.swift */,
+				048704F1290989B200EC8F76 /* ReportTableViewCell.xib */,
+				04EEAD1A2910D6AE002D39BE /* CombinedChartTableViewCell.swift */,
+				04EEAD1B2910D6AE002D39BE /* CombinedChartTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		049D2BC129082CDB00E036C4 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -274,8 +299,8 @@
 		04B2BBE12907EFD10055C4E4 /* WalletVC */ = {
 			isa = PBXGroup;
 			children = (
-				04B2BBE22907EFD10055C4E4 /* WalletViewController.xib */,
 				04B2BBE32907EFD10055C4E4 /* WalletViewController.swift */,
+				04B2BBE22907EFD10055C4E4 /* WalletViewController.xib */,
 			);
 			path = WalletVC;
 			sourceTree = "<group>";
@@ -283,8 +308,9 @@
 		04B2BBE42907EFD10055C4E4 /* ReportVC */ = {
 			isa = PBXGroup;
 			children = (
-				04B2BBE52907EFD10055C4E4 /* ReportViewController.xib */,
+				048704EA2909887300EC8F76 /* Cell */,
 				04B2BBE62907EFD10055C4E4 /* ReportViewController.swift */,
+				04B2BBE52907EFD10055C4E4 /* ReportViewController.xib */,
 			);
 			path = ReportVC;
 			sourceTree = "<group>";
@@ -322,8 +348,8 @@
 		04B2BBF12907EFD10055C4E4 /* AddTransaction */ = {
 			isa = PBXGroup;
 			children = (
-				04B2BBF22907EFD10055C4E4 /* AddTransactionViewController.xib */,
 				04B2BBF32907EFD10055C4E4 /* AddTransactionViewController.swift */,
+				04B2BBF22907EFD10055C4E4 /* AddTransactionViewController.xib */,
 			);
 			path = AddTransaction;
 			sourceTree = "<group>";
@@ -453,12 +479,14 @@
 				049D2BFB2908578200E036C4 /* IncomeExpenseTableViewCell.xib in Resources */,
 				04B2BBB52907EF7D0055C4E4 /* LaunchScreen.storyboard in Resources */,
 				04B2BBF72907EFD10055C4E4 /* WalletViewController.xib in Resources */,
+				048704F3290989B200EC8F76 /* ReportTableViewCell.xib in Resources */,
 				04D0D4942908E78600162268 /* CategoryTableViewCell.xib in Resources */,
 				04B2BC042907EFD10055C4E4 /* LoginViewController.xib in Resources */,
 				049D2C1629085A9B00E036C4 /* AdsTableViewCellCell.xib in Resources */,
 				04D0D48E2908E58100162268 /* CategoryViewController.xib in Resources */,
 				04B2BBF92907EFD10055C4E4 /* ReportViewController.xib in Resources */,
 				04D0D49B2908EDBC00162268 /* CategoryJSON.json in Resources */,
+				048704EE2909888D00EC8F76 /* PieChartTableViewCell.xib in Resources */,
 				04B2BBDF2907EFBE0055C4E4 /* GoogleService-Info.plist in Resources */,
 				049D2C0C2908593D00E036C4 /* TransactionTableViewCell.xib in Resources */,
 				04B2BBB22907EF7D0055C4E4 /* Assets.xcassets in Resources */,
@@ -469,6 +497,7 @@
 				049D2C00290857B100E036C4 /* AdsTableViewCell.xib in Resources */,
 				04B2BBFF2907EFD10055C4E4 /* AccountViewController.xib in Resources */,
 				049D2BC529082CFC00E036C4 /* AccountTableViewCell.xib in Resources */,
+				04EEAD1D2910D6AE002D39BE /* CombinedChartTableViewCell.xib in Resources */,
 				049D2BDF2908339100E036C4 /* HistoryViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -535,6 +564,7 @@
 				04B2BBA92907EF7A0055C4E4 /* AppDelegate.swift in Sources */,
 				04B2BBFA2907EFD10055C4E4 /* ReportViewController.swift in Sources */,
 				04B2BBAB2907EF7A0055C4E4 /* SceneDelegate.swift in Sources */,
+				048704F2290989B200EC8F76 /* ReportTableViewCell.swift in Sources */,
 				04B2BC032907EFD10055C4E4 /* AddTransactionViewController.swift in Sources */,
 				04B2BBFC2907EFD10055C4E4 /* HomeViewController.swift in Sources */,
 				049D2BCE2908328B00E036C4 /* DataBaseManager.swift in Sources */,
@@ -542,6 +572,7 @@
 				04B2BC012907EFD10055C4E4 /* CustomTabBarController.swift in Sources */,
 				049D2BEC290854DF00E036C4 /* Education.swift in Sources */,
 				04D0D49F290949E600162268 /* HeaderView.swift in Sources */,
+				048704ED2909888D00EC8F76 /* PieChartTableViewCell.swift in Sources */,
 				04B2BC092907EFFF0055C4E4 /* Extension+UIFont.swift in Sources */,
 				049D2BF52908558C00E036C4 /* Categories.swift in Sources */,
 				04B2BC0A2907EFFF0055C4E4 /* Extension+UIColor.swift in Sources */,
@@ -554,6 +585,7 @@
 				049D2BDE2908339100E036C4 /* HistoryViewController.swift in Sources */,
 				049D2BD2290832F200E036C4 /* ConvertHelper.swift in Sources */,
 				049D2BE62908549600E036C4 /* Essential.swift in Sources */,
+				04EEAD1C2910D6AE002D39BE /* CombinedChartTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

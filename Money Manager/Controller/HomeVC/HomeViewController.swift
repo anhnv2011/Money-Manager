@@ -280,7 +280,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             let edit = UIContextualAction(style: .normal, title: "Edit") { _, _, _ in
                 let editVC = AddTransactionViewController()
                 editVC.transaction = self.transaction?[indexPath.row]
-                editVC.passData = { [weak self] transaction in
+                editVC.saveCompletion = { [weak self] transaction in
                     guard let strongSelf = self, let transaction = transaction else { return }
                     //                    strongSelf.transaction[indexPath.row] = transaction
                     //                    strongSelf.transaction.sort(by: { $1.date ?? Date() < $0.date ?? Date() })
