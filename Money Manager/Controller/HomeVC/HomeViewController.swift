@@ -46,6 +46,7 @@ class HomeViewController: UIViewController {
     var previousScrollOffSet: CGFloat = 0
     
     var transaction: Results<Transaction>?
+
     var firstDayOfMonth = Calendar.current.date(from: Calendar.current.dateComponents([.year, .month], from: Date()))
     var lastDayOfMonth = Calendar.current.date(from: DateComponents(year: Calendar.current.component(.year, from: Date()), month: Calendar.current.component(.month, from: Date())+1))
     
@@ -55,10 +56,9 @@ class HomeViewController: UIViewController {
         navigationController?.isNavigationBarHidden = true
         setupUI()
         fetchData()
-        
-       
+        setupNoti()
     }
-    
+   
     // MARK: viewWillAppear
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -73,6 +73,7 @@ class HomeViewController: UIViewController {
     //MARK:- Data
     private func fetchData(){
         transaction = DataBaseManager.shared.getMonthData(firstDayOfMonth ?? Date(), lastDayOfMonth ?? Date())
+        tableView.reloadData()
     }
     
     // MARK: Setup UI
@@ -132,6 +133,13 @@ class HomeViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    private func setupNoti(){
+        NotificationCenter.default.addObserver(self, selector: #selector(addnew), name: NSNotification.Name("Add"), object: nil)
+    }
+    @objc func addnew(){
+        fetchData()
     }
 }
 
