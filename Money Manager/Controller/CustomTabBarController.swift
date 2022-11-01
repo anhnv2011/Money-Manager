@@ -130,15 +130,15 @@ class CustomTabBarController: UITabBarController {
     @objc func onAdd(_ sender: UIButton) {
         let vc = AddTransactionViewController()
       
-        vc.saveCompletion = {[weak self] transaction in
-            guard let strongSelf = self, let transaction = transaction else { return }
+        vc.saveCompletion = {transaction in
+            guard let transaction = transaction else { return }
             
             DataBaseManager.shared.addData(transaction)
             
             NotificationCenter.default.post(name: NSNotification.Name("Add"), object: nil)
         }
         present(vc, animated: true)
-        //        navigationController?.pushViewController(vc, animated: false)
+
     }
 }
 
