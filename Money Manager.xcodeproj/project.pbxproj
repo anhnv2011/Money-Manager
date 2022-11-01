@@ -74,6 +74,12 @@
 		04EEAD682911A6C2002D39BE /* AddNew.png in Resources */ = {isa = PBXBuildFile; fileRef = 04EEAD672911A6C1002D39BE /* AddNew.png */; };
 		04EEAD6C2911A6DC002D39BE /* Category.png in Resources */ = {isa = PBXBuildFile; fileRef = 04EEAD6B2911A6DC002D39BE /* Category.png */; };
 		04EEAD702911A749002D39BE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 04EEAD6F2911A749002D39BE /* README.md */; };
+		04EEAD782911AD97002D39BE /* MonthReport.gif in Resources */ = {isa = PBXBuildFile; fileRef = 04EEAD722911AD96002D39BE /* MonthReport.gif */; };
+		04EEAD792911AD97002D39BE /* GoogleLogin.gif in Resources */ = {isa = PBXBuildFile; fileRef = 04EEAD732911AD96002D39BE /* GoogleLogin.gif */; };
+		04EEAD7A2911AD97002D39BE /* Login.gif in Resources */ = {isa = PBXBuildFile; fileRef = 04EEAD742911AD97002D39BE /* Login.gif */; };
+		04EEAD7B2911AD97002D39BE /* AddNew.gif in Resources */ = {isa = PBXBuildFile; fileRef = 04EEAD752911AD97002D39BE /* AddNew.gif */; };
+		04EEAD7C2911AD97002D39BE /* FaceBookLogin.gif in Resources */ = {isa = PBXBuildFile; fileRef = 04EEAD762911AD97002D39BE /* FaceBookLogin.gif */; };
+		04EEAD7D2911AD97002D39BE /* YearReport.gif in Resources */ = {isa = PBXBuildFile; fileRef = 04EEAD772911AD97002D39BE /* YearReport.gif */; };
 		28B03D73EAF7B2EB151CB143 /* Pods_Money_Manager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51B22C44713760849C150E21 /* Pods_Money_Manager.framework */; };
 /* End PBXBuildFile section */
 
@@ -148,6 +154,12 @@
 		04EEAD672911A6C1002D39BE /* AddNew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AddNew.png; sourceTree = "<group>"; };
 		04EEAD6B2911A6DC002D39BE /* Category.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Category.png; sourceTree = "<group>"; };
 		04EEAD6F2911A749002D39BE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		04EEAD722911AD96002D39BE /* MonthReport.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = MonthReport.gif; sourceTree = "<group>"; };
+		04EEAD732911AD96002D39BE /* GoogleLogin.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = GoogleLogin.gif; sourceTree = "<group>"; };
+		04EEAD742911AD97002D39BE /* Login.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Login.gif; sourceTree = "<group>"; };
+		04EEAD752911AD97002D39BE /* AddNew.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = AddNew.gif; sourceTree = "<group>"; };
+		04EEAD762911AD97002D39BE /* FaceBookLogin.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = FaceBookLogin.gif; sourceTree = "<group>"; };
+		04EEAD772911AD97002D39BE /* YearReport.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = YearReport.gif; sourceTree = "<group>"; };
 		14691A730239AD6130AB7CBC /* Pods-Money Manager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Money Manager.release.xcconfig"; path = "Target Support Files/Pods-Money Manager/Pods-Money Manager.release.xcconfig"; sourceTree = "<group>"; };
 		51B22C44713760849C150E21 /* Pods_Money_Manager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Money_Manager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		630BD779A69A3BF51DE1B1BB /* Pods-Money Manager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Money Manager.debug.xcconfig"; path = "Target Support Files/Pods-Money Manager/Pods-Money Manager.debug.xcconfig"; sourceTree = "<group>"; };
@@ -447,6 +459,12 @@
 		04EEAD4C2911A3C2002D39BE /* Gif */ = {
 			isa = PBXGroup;
 			children = (
+				04EEAD752911AD97002D39BE /* AddNew.gif */,
+				04EEAD762911AD97002D39BE /* FaceBookLogin.gif */,
+				04EEAD732911AD96002D39BE /* GoogleLogin.gif */,
+				04EEAD742911AD97002D39BE /* Login.gif */,
+				04EEAD722911AD96002D39BE /* MonthReport.gif */,
+				04EEAD772911AD97002D39BE /* YearReport.gif */,
 			);
 			path = Gif;
 			sourceTree = "<group>";
@@ -532,10 +550,13 @@
 				04B2BBF72907EFD10055C4E4 /* WalletViewController.xib in Resources */,
 				048704F3290989B200EC8F76 /* ReportTableViewCell.xib in Resources */,
 				04D0D4942908E78600162268 /* CategoryTableViewCell.xib in Resources */,
+				04EEAD792911AD97002D39BE /* GoogleLogin.gif in Resources */,
 				04B2BC042907EFD10055C4E4 /* LoginViewController.xib in Resources */,
 				04EEAD642911A696002D39BE /* YearReport.png in Resources */,
 				049D2C1629085A9B00E036C4 /* AdsTableViewCellCell.xib in Resources */,
 				04D0D48E2908E58100162268 /* CategoryViewController.xib in Resources */,
+				04EEAD782911AD97002D39BE /* MonthReport.gif in Resources */,
+				04EEAD7D2911AD97002D39BE /* YearReport.gif in Resources */,
 				04B2BBF92907EFD10055C4E4 /* ReportViewController.xib in Resources */,
 				04EEAD6C2911A6DC002D39BE /* Category.png in Resources */,
 				04D0D49B2908EDBC00162268 /* CategoryJSON.json in Resources */,
@@ -554,9 +575,12 @@
 				04EEAD562911A5C4002D39BE /* GoogleLogin.png in Resources */,
 				04B2BBFF2907EFD10055C4E4 /* AccountViewController.xib in Resources */,
 				049D2BC529082CFC00E036C4 /* AccountTableViewCell.xib in Resources */,
+				04EEAD7B2911AD97002D39BE /* AddNew.gif in Resources */,
 				04EEAD522911A4A4002D39BE /* Login.png in Resources */,
 				04EEAD1D2910D6AE002D39BE /* CombinedChartTableViewCell.xib in Resources */,
 				04EEAD682911A6C2002D39BE /* AddNew.png in Resources */,
+				04EEAD7A2911AD97002D39BE /* Login.gif in Resources */,
+				04EEAD7C2911AD97002D39BE /* FaceBookLogin.gif in Resources */,
 				049D2BDF2908339100E036C4 /* HistoryViewController.xib in Resources */,
 				04EEAD5A2911A5F3002D39BE /* FaceBookLogin.png in Resources */,
 			);
